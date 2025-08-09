@@ -22,16 +22,16 @@
 ** Ayleio **媒体播放器从基本媒体套件中扑来，我之所以这样做，是因为媒体套件无法离线构建，所以我做到了
 
  - 🇮🇩[印度尼西亚]（https://github.com/azkadev/ayleio/blob/main/main/readme.md）
- - 🇨🇿[非洲]（https://github.com/azkadev/ayleio/blob/main/main/readme_afrika.md）
- - 🇨🇳[中国]（https://github.com/azkadev/ayleio/blob/main/main/readme_china.md）
- - 🏴󠁧󠁢󠁥󠁮󠁧󠁿[英语]（https://github.com/azkadev/ayleio/blob/main/main/readme_english.md）
- - 🇮🇳[印度]（https://github.com/azkadev/ayleio/blob/main/main/readme_india.md）
- - 🇮🇩[java]（https://github.com/azkadev/ayleio/blob/main/main/readme_jawa.md）
- - 🇯🇵[日本]（https://github.com/azkadev/ayleio/blob/main/main/readme_jepang.md）
- - 🇰🇷[韩国]（https://github.com/azkadev/ayleio/blob/main/main/readme_korea.md）
- - 🇷🇺[俄罗斯]（https://github.com/azkadev/ayleio/blob/main/main/readme_russia.md）
- - 🇮🇩[Sundanese]（https://github.com/azkadev/ayleio/blob/main/main/readme_sunda.md）
- - 🇹🇭[泰国]（https://github.com/azkadev/ayleio/blob/main/main/readme_thailand.md）
+ - 🇺🇸[英语]（https://github.com/azkadev/ayleio/blob/main/main/readme_en.md）
+ - 🇰🇷[韩国共和国]（https://github.com/azkadev/ayleio/blob/main/main/readme_ko.md）
+ - 🇨🇳[中国]（https://github.com/azkadev/ayleio/blob/main/main/readme_zh-cn.md）
+ - 🇿🇦[南非]（https://github.com/azkadev/ayleio/blob/main/main/readme_af.md）
+ - 🇮🇳[印度]（https://github.com/azkadev/ayleio/blob/main/main/readme_hi.md）
+ - 🇯🇵[日本]（https://github.com/azkadev/ayleio/blob/main/main/readme_ja.md）
+ - 🇷🇺[俄罗斯]（https://github.com/azkadev/ayleio/blob/main/main/readme_ru.md）
+ - 🇹🇭[泰国]（https://github.com/azkadev/ayleio/blob/main/main/readme_th.md）
+ - 🇦🇪[阿拉伯联合酋长国]（https://github.com/azkadev/ayleio/blob/main/main/readme_ar.md）
+
 
 ＃＃ 事实
 
@@ -143,7 +143,7 @@ print（“新客户ID：$ {newClientId}”）;
 
 |键|描述|值|必须填写|
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| **@type ** |这填充了来自| **字符串** | **是** |
+| **@type ** |这是用|的方法填充的**字符串** | **是的**|
 | **@client_id ** |它包含来自** createClient **方法** |的客户端ID。 ** int ** | **如果用于同步方法，则必须没有** |
 | **@extra ** |填写唯一ID，因为异步方法没有直接返回数据，因此需要额外作为键返回数据| **字符串** | **否** |
 
@@ -210,7 +210,7 @@ print（“新客户ID：$ {newClientId}”）;
 
 ##支持我
 
-如果您认为此程序很有用，则可以在可用的社交媒体上支持我[Github Azkadev]（https://github.com/azkadev）还有我的赞助商。我不介意您是否只关注 /捐赠一点钱
+如果您认为此程序很有用，则可以在链接上支持我[Github Azkadev]（https://github.com/azkadev），可以提供社交媒体和我的赞助商。我不介意您是否只关注 /捐赠一点钱
 
 []（https://github.com/azkadev/azkadev/blob/main/asses/gopay.png）
 

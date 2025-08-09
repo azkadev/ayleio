@@ -22,16 +22,16 @@
 ** ayleio **ベースメディアキットのフラッターのメディアプレーヤー、メディアキットがオフラインで構築できないのでこれを作りました。
 
 -🇮🇩[インドネシア]（https://github.com/azkadev/ayleio/blob/main/readme.md）
--🇨🇿[アフリカ]（https://github.com/azkadev/ayleio/blob/main/readme_afrika.md）
--🇨🇳[中国]（https://github.com/azkadev/ayleio/blob/main/readme_china.md）
--🏴󠁧󠁢󠁥󠁮󠁧󠁿[英語]（https://github.com/azkadev/ayleio/blob/main/readme_english.md）
--🇮🇳[インド]（https://github.com/azkadev/ayleio/blob/main/readme_india.md）
--🇮🇩[java]（https://github.com/azkadev/ayleio/blob/main/readme_jawa.md）
--🇯🇵[日本語]（https://github.com/azkadev/ayleio/blob/main/readme_jepang.md）
--🇰🇷[韓国]（https://github.com/azkadev/ayleio/blob/main/readme_korea.md）
--🇷🇺[ロシア]（https://github.com/azkadev/ayleio/blob/main/readme_russia.md）
--🇮🇩[sundanese]（https://github.com/azkadev/ayleio/blob/main/readme_sunda.md）
--🇹🇭[タイ]（https://github.com/azkadev/ayleio/blob/main/readme_thailand.md）
+-🇺🇸[英語]（https://github.com/azkadev/ayleio/blob/main/readme_en.md）
+-🇰🇷[韓国、韓国共和国]（https://github.com/azkadev/ayleio/blob/main/readme_ko.md）
+-🇨🇳[中国]（https://github.com/azkadev/ayleio/blob/main/readme_zh-cn.md）
+-🇿🇦[南アフリカ]（https://github.com/azkadev/ayleio/blob/main/readme_af.md）
+-🇮🇳[インド]（https://github.com/azkadev/ayleio/blob/main/readme_hi.md）
+-🇯🇵[日本]（https://github.com/azkadev/ayleio/blob/main/readme_ja.md）
+-🇷🇺[ロシア]（https://github.com/azkadev/ayleio/blob/main/readme_ru.md）
+-🇹🇭[タイ]（https://github.com/azkadev/ayleio/blob/main/readme_th.md）
+-🇦🇪[ユナイテッドアラブ首長国家]（https://github.com/azkadev/ayleio/blob/main/readme_ar.md）
+
 
 ＃＃ 事実
 
@@ -143,7 +143,7 @@ APIを呼び出すには、ドキュメントを直接読む必要がありま�
 
 |キー|説明|値|満たさなければならない|
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| **@タイプ** |これはからの方法でいっぱいです| **文字列** | **はい** |
+| **@タイプ** |これは、|の方法で満たされています**文字列** | **はい**|
 | **@client_id ** | ** createclient ** method **のクライアントIDが含まれています| ** int ** | **同期メソッドの場合は、**ではないものがなければなりません|
 | **@extra ** | Asyncメソッドが直接データを返さないため、キーリターンデータとして追加が必要なため、一意のIDを入力してください| **文字列** | **いいえ** |
 
@@ -210,27 +210,27 @@ if ** you ** still ** feel ** **難易度**と**混乱** ** **から**グルー�
 
 ##私をサポートします
 
-このプログラムが便利であると感じたら、[Github azkadev]（https://github.com/azkadev）をサポートできます。and my sponsor. I don't mind if you only follow / donate a little money
+このプログラムが便利だと感じた場合は、リンクで[Github azkadev]（https://github.com/azkadev）をサポートできます。ソーシャルメディアと私のスポンサーです。あなたが従う /寄付するだけでも、私は気にしません少しのお金
 
 []（https://github.com/azkadev/azkadev/blob/main/asses/gopay.png）
 
 -https：//github.com/spons/azkadev
 -https：//www.patreon.com/c/azkadev
-- https://openclective.com/azkadev
+-https：//openclective.com/azkadev
 -https：//paypal.me/azkadev
 
 ありがとう
 
 
-AZKADEV-18-07-2025
+Azkadev-18-07-2025
 
--[Media Kit] (https://github.com/media-kit/media-kit)
-  Actually this is the code from the media kit but some are changed, and this is 100% Support Build Offline
+ -  [メディアキット]（https://github.com/media-kit/media-kit）
+  実際、これはメディアキットのコードですが、一部は変更されており、これはオフラインで100％サポートビルドです
 
 
-## Tags
+##タグ
 
-- Ayleio Dart
+-ayleio dart
 
 </br>
 </br>
@@ -238,6 +238,6 @@ AZKADEV-18-07-2025
 
 <div align = "center">
 
-** Made as well as possible for Dart & Flutter Community **
+** Dart＆Flutterコミュニティのために可能な限り作られています**
 
 </div>

@@ -22,16 +22,16 @@
 ** ayleio ** mediaspeler vir fladder uit die basismedia -kit, ek het dit gemaak omdat die mediakit nie vanlyn kan opbou nie, so ek maak dit
 
 - 🇮🇩 [Indonesië] (https://github.com/azkadev/ayleio/blob/main/readme.md)
-- 🇨🇿 [Afrika] (https://github.com/azkadev/ayleio/blob/main/readme_afrika.md)
-- 🇨🇳 [China] (https://github.com/azkadev/ayleio/blob/main/readme_china.md)
-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [Engels] (https://github.com/azkadev/ayleio/blob/main/readme_english.md)
-- 🇮🇳 [Indië] (https://github.com/azkadev/ayleio/blob/main/readme_india.md)
-- 🇮🇩 [Java] (https://github.com/azkadev/ayleio/blob/main/readme_jawa.md)
-- 🇯🇵 [Japannees] (https://github.com/azkadev/ayleio/blob/main/readme_jepang.md)
-- 🇰🇷 [Korea] (https://github.com/azkadev/ayleio/blob/main/readme_korea.md)
-- 🇷🇺 [Rusland] (https://github.com/azkadev/ayleio/blob/main/readme_russia.md)
-- 🇮🇩 [Sundanese] (https://github.com/azkadev/ayleio/blob/main/readme_sunda.md)
-- 🇹🇭 [Thailand] (https://github.com/azkadev/ayleio/blob/main/readme_thailand.md)
+- 🇺🇸 [Engels] (https://github.com/azkadev/ayleio/blob/main/readme_en.md)
+- 🇰🇷 [Korea, Republiek van Suid -Korea] (https://github.com/azkadev/ayleio/blob/main/readme_ko.md)
+- 🇨🇳 [China] (https://github.com/azkadev/ayleio/blob/main/readme_zh-cn.md)
+- 🇿🇦 [Suid -Afrika] (https://github.com/azkadev/ayleio/blob/main/readme_af.md)
+- 🇮🇳 [Indië] (https://github.com/azkadev/ayleio/blob/main/readme_hi.md)
+- 🇯🇵 [Japan] (https://github.com/azkadev/ayleio/blob/main/readme_ja.md)
+- 🇷🇺 [Rusland] (https://github.com/azkadev/ayleio/blob/main/readme_ru.md)
+- 🇹🇭 [Thailand] (https://github.com/azkadev/ayleio/blob/main/readme_th.md)
+- 🇦🇪 [Verenigde Arabiese Emirate] (https://github.com/azkadev/ayleio/blob/main/readme_ar.md)
+
 
 ## feit
 
@@ -143,7 +143,7 @@ Hier bied ek slegs parameters datakaart, kaart / json Daar is verskeie belangrik
 
 | Sleutel | Beskrywing | Waarde | Moet gevul word |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| **@tipe ** | Dit is gevul met die metode van| ** String ** | ** Ja ** |
+| **@tipe ** | Dit is gevul met die metode van | ** String ** | ** Ja **|
 | **@client_id ** | Dit bevat kliënt -ID vanaf die ** createClient ** -metode ** | ** int ** | ** As daar vir die sinkroniseringsmetode iets moet wees wat nie ** |
 | **@ekstra ** | Vul die unieke ID in omdat die async -metode nie direk data teruggee nie, sodat dit ekstra nodig is as 'n sleutelopgawe -data | ** String ** | ** nee ** |
 
@@ -210,7 +210,7 @@ As ** jy ** nog steeds ** voel ** ** Moeilikheid ** en ** Verwarring ** ** Probe
 
 ## Ondersteun my
 
-As u voel dat hierdie program nuttig is, kan u my [github azkadev] (https://github.com/azkadev) ondersteun op die skakel wat beskikbaar is op sosiale mediaEn my borg. Ek gee nie om as u net 'n bietjie geld volg / skenk nie
+As u voel dat hierdie program nuttig is, kan u my [GitHub Azkadev] (https://github.com/azkadev) op die skakel ondersteun, is beskikbaar op sosiale media en my borge. Ek gee nie om as u net volg / skenk nie'n bietjie geld
 
 [] (https://github.com/azkadev/azkadev/blob/main/asses/gopay.png)
 
