@@ -9,7 +9,6 @@ library;
 import 'dart:ffi';
 import 'dart:io';
 
- 
 /// Whether creating new anonymous executable memory mappings is blocked by the system.
 final bool isExecmemRestricted = _checkIfExecmemRestricted();
 
@@ -23,7 +22,8 @@ bool _checkIfExecmemRestricted() {
         'mmap',
         isLeaf: true,
       );
-      final munmap = libs.lookupFunction<MunmapFunctionNative, MunmapFunctionDart>(
+      final munmap =
+          libs.lookupFunction<MunmapFunctionNative, MunmapFunctionDart>(
         'munmap',
         isLeaf: true,
       );

@@ -28,7 +28,8 @@ class FullscreenInheritedWidget extends InheritedWidget {
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static FullscreenInheritedWidget? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<FullscreenInheritedWidget>();
+    return context
+        .dependOnInheritedWidgetOfExactType<FullscreenInheritedWidget>();
   }
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
@@ -39,7 +40,8 @@ class FullscreenInheritedWidget extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(FullscreenInheritedWidget oldWidget) => identical(parent, oldWidget.parent);
+  bool updateShouldNotify(FullscreenInheritedWidget oldWidget) =>
+      identical(parent, oldWidget.parent);
 }
 
 /// {@template fullscreen_inherited_widget_pop_scope}
@@ -52,10 +54,12 @@ class _FullscreenInheritedWidgetPopScope extends StatefulWidget {
   const _FullscreenInheritedWidgetPopScope({required this.child});
 
   @override
-  State<_FullscreenInheritedWidgetPopScope> createState() => _FullscreenInheritedWidgetPopScopeState();
+  State<_FullscreenInheritedWidgetPopScope> createState() =>
+      _FullscreenInheritedWidgetPopScopeState();
 }
 
-class _FullscreenInheritedWidgetPopScopeState extends State<_FullscreenInheritedWidgetPopScope> {
+class _FullscreenInheritedWidgetPopScopeState
+    extends State<_FullscreenInheritedWidgetPopScope> {
   @override
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use

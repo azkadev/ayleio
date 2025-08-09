@@ -46,7 +46,11 @@ class Playlist extends Playable {
   }
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is Playlist && const ListEquality().equals(medias, other.medias) && index == other.index;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Playlist &&
+          const ListEquality().equals(medias, other.medias) &&
+          index == other.index;
 
   @override
   int get hashCode => const ListEquality().hash(medias) ^ index.hashCode;

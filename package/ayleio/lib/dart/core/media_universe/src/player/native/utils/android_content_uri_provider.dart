@@ -7,7 +7,7 @@ library;
 
 // import 'dart:ffi';
 //
-import 'dart:ffi' ;
+import 'dart:ffi';
 
 import 'dart:collection';
 
@@ -70,7 +70,8 @@ abstract class AndroidContentUriProvider {
   /// The native implementation for [openFileDescriptor] & [openFileDescriptorSync].
   static int _openFileDescriptor(String uri) {
     final lib = DynamicLibrary.open('libmediakitandroidhelper.so');
-    final fn = lib.lookupFunction<OpenFileDescriptorCXX, OpenFileDescriptorDart>(
+    final fn =
+        lib.lookupFunction<OpenFileDescriptorCXX, OpenFileDescriptorDart>(
       'MediaKitAndroidHelperOpenFileDescriptor',
     );
     final name = uri.toNativeUtf8();
@@ -81,7 +82,8 @@ abstract class AndroidContentUriProvider {
   /// The native implementation for [closeFileDescriptor] & [closeFileDescriptorSync].
   static void _closeFileDescriptor(int fileDescriptor) {
     final lib = DynamicLibrary.open('libmediakitandroidhelper.so');
-    final fn = lib.lookupFunction<CloseFileDescriptorCXX, CloseFileDescriptorDart>(
+    final fn =
+        lib.lookupFunction<CloseFileDescriptorCXX, CloseFileDescriptorDart>(
       'MediaKitAndroidHelperCloseFileDescriptor',
     );
     fn.call(fileDescriptor);

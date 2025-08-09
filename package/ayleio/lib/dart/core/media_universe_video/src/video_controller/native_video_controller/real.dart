@@ -24,7 +24,7 @@ import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart';
 import 'package:ayleio/dart/core/media_universe_video/src/utils/query_decoders.dart';
 import 'package:ayleio/dart/core/media_universe_video/src/video_controller/video_controller.dart';
 import 'package:ayleio/dart/core/media_universe_video/src/video_controller/platform_video_controller.dart';
- 
+
 /// {@template native_video_controller}
 ///
 /// NativeVideoController
@@ -39,7 +39,11 @@ import 'package:ayleio/dart/core/media_universe_video/src/video_controller/platf
 /// {@endtemplate}
 class NativeVideoController extends PlatformVideoController {
   /// Whether [NativeVideoController] is supported on the current platform or not.
-  static bool get supported => Platform.isWindows || Platform.isLinux || Platform.isMacOS || Platform.isIOS;
+  static bool get supported =>
+      Platform.isWindows ||
+      Platform.isLinux ||
+      Platform.isMacOS ||
+      Platform.isIOS;
 
   /// Fixed width of the video output.
   int? width;
@@ -203,7 +207,8 @@ class NativeVideoController extends PlatformVideoController {
               _controllers[handle]?.id.value = id;
               // Notify about the first frame being rendered.
               if (rect.width > 0 && rect.height > 0) {
-                final completer = _controllers[handle]?.waitUntilFirstFrameRenderedCompleter;
+                final completer =
+                    _controllers[handle]?.waitUntilFirstFrameRenderedCompleter;
                 if (!(completer?.isCompleted ?? true)) {
                   completer?.complete();
                 }

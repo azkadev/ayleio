@@ -50,7 +50,8 @@ class VideoStateInheritedWidget extends InheritedWidget {
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static VideoStateInheritedWidget? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<VideoStateInheritedWidget>();
+    return context
+        .dependOnInheritedWidgetOfExactType<VideoStateInheritedWidget>();
   }
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
@@ -61,7 +62,9 @@ class VideoStateInheritedWidget extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(VideoStateInheritedWidget oldWidget) => identical(state, oldWidget.state) && identical(contextNotifier, oldWidget.contextNotifier);
+  bool updateShouldNotify(VideoStateInheritedWidget oldWidget) =>
+      identical(state, oldWidget.state) &&
+      identical(contextNotifier, oldWidget.contextNotifier);
 }
 
 /// {@template video_state_inherited_widget_context_notifier}
@@ -96,11 +99,13 @@ class VideoStateInheritedWidgetContextNotifier extends StatefulWidget {
   });
 
   @override
-  State<VideoStateInheritedWidgetContextNotifier> createState() => VideoStateInheritedWidgetContextNotifierState();
+  State<VideoStateInheritedWidgetContextNotifier> createState() =>
+      VideoStateInheritedWidgetContextNotifierState();
 }
 
 /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-class VideoStateInheritedWidgetContextNotifierState extends State<VideoStateInheritedWidgetContextNotifier> {
+class VideoStateInheritedWidgetContextNotifierState
+    extends State<VideoStateInheritedWidgetContextNotifier> {
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static final fallback = HashMap<VideoState, BuildContext>.identity();
 

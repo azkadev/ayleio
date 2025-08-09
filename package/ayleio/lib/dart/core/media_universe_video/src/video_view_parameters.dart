@@ -85,13 +85,34 @@ class VideoViewParameters {
       aspectRatio: aspectRatio ?? this.aspectRatio,
       filterQuality: filterQuality ?? this.filterQuality,
       controls: controls ?? this.controls,
-      subtitleViewConfiguration: subtitleViewConfiguration ?? this.subtitleViewConfiguration,
+      subtitleViewConfiguration:
+          subtitleViewConfiguration ?? this.subtitleViewConfiguration,
     );
   }
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is VideoViewParameters && other.width == width && other.height == height && other.fit == fit && other.fill == fill && other.alignment == alignment && other.aspectRatio == aspectRatio && other.filterQuality == filterQuality && other.controls == controls && other.subtitleViewConfiguration == subtitleViewConfiguration;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is VideoViewParameters &&
+          other.width == width &&
+          other.height == height &&
+          other.fit == fit &&
+          other.fill == fill &&
+          other.alignment == alignment &&
+          other.aspectRatio == aspectRatio &&
+          other.filterQuality == filterQuality &&
+          other.controls == controls &&
+          other.subtitleViewConfiguration == subtitleViewConfiguration;
 
   @override
-  int get hashCode => width.hashCode ^ height.hashCode ^ fit.hashCode ^ fill.hashCode ^ alignment.hashCode ^ aspectRatio.hashCode ^ filterQuality.hashCode ^ controls.hashCode ^ subtitleViewConfiguration.hashCode;
+  int get hashCode =>
+      width.hashCode ^
+      height.hashCode ^
+      fit.hashCode ^
+      fill.hashCode ^
+      alignment.hashCode ^
+      aspectRatio.hashCode ^
+      filterQuality.hashCode ^
+      controls.hashCode ^
+      subtitleViewConfiguration.hashCode;
 }

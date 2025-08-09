@@ -1,5 +1,3 @@
-
-
 // ignore_for_file: empty_catches, non_constant_identifier_names
 
 import 'dart:async';
@@ -9,13 +7,10 @@ import 'dart:io';
 
 import 'package:ffi/ffi.dart';
 
-
 import 'package:ayleio/uuid/uuid.dart';
 
 /// No Doc Azkadev
 class Ayleio {
-   
-
   bool _isInitialized = false;
 
   /// No Doc Azkadev
@@ -42,8 +37,7 @@ class Ayleio {
   /// No Doc Azkadev
   void ensureInitialized({
     String pathNativeLibrary = "",
-  }) {
-   }
+  }) {}
 
   /// No Doc Azkadev
 
@@ -71,11 +65,11 @@ class Ayleio {
 
   /// No Doc Azkadev
   Map nativeLibraryInvokeRaw(Map parameters) {
-    final parametersNative = json.encode(parameters).toNativeUtf8().cast<Char>();
+    final parametersNative =
+        json.encode(parameters).toNativeUtf8().cast<Char>();
     final resultNative = parametersNative;
     return json.decode(resultNative.cast<Utf8>().toDartString());
   }
-
 
   /// untuk membuat client nativeLibrary
   ///
@@ -118,11 +112,9 @@ class Ayleio {
     parameters["@extra"] = extra;
     parameters["@is_async"] = true;
     nativeLibraryInvokeRaw(parameters);
-    // final result = await completer.future; 
+    // final result = await completer.future;
     return {
       "@type": "ok",
     };
   }
 }
-
-

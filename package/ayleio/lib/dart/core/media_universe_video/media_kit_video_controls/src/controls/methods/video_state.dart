@@ -11,10 +11,12 @@ import 'package:ayleio/dart/core/media_universe_video/src/utils/dispose_safe_not
 // import 'package:ayleio/dart/core/media_universe_video/src/video/video.dart';
 
 /// Returns the [VideoState] associated with the [Video] present in the current [BuildContext].
-VideoState state(BuildContext context) => VideoStateInheritedWidget.of(context).state;
+VideoState state(BuildContext context) =>
+    VideoStateInheritedWidget.of(context).state;
 
 /// Returns the [ValueNotifier<BuildContext>] associated with the [Video] present in the current [BuildContext].
-DisposeSafeNotifier<BuildContext?> contextNotifier(BuildContext context) => VideoStateInheritedWidget.of(context).contextNotifier;
+DisposeSafeNotifier<BuildContext?> contextNotifier(BuildContext context) =>
+    VideoStateInheritedWidget.of(context).contextNotifier;
 
 /// Returns the [ValueNotifier<VideoViewParameters>] associated with the [Video] present in the current [BuildContext].
 ValueNotifier<VideoViewParameters> videoViewParametersNotifier(
@@ -23,10 +25,13 @@ ValueNotifier<VideoViewParameters> videoViewParametersNotifier(
     VideoStateInheritedWidget.of(context).videoViewParametersNotifier;
 
 /// Returns the [VideoController] associated with the [Video] present in the current [BuildContext].
-VideoController controller(BuildContext context) => VideoStateInheritedWidget.of(context).state.widget.controller;
+VideoController controller(BuildContext context) =>
+    VideoStateInheritedWidget.of(context).state.widget.controller;
 
 /// Returns the callback which must be invoked when the video enters fullscreen mode.
-Future<void> Function()? onEnterFullscreen(BuildContext context) => VideoStateInheritedWidget.of(context).state.widget.onEnterFullscreen;
+Future<void> Function()? onEnterFullscreen(BuildContext context) =>
+    VideoStateInheritedWidget.of(context).state.widget.onEnterFullscreen;
 
 /// Returns the callback which must be invoked when the video exits fullscreen mode.
-Future<void> Function()? onExitFullscreen(BuildContext context) => VideoStateInheritedWidget.of(context).state.widget.onExitFullscreen;
+Future<void> Function()? onExitFullscreen(BuildContext context) =>
+    VideoStateInheritedWidget.of(context).state.widget.onExitFullscreen;

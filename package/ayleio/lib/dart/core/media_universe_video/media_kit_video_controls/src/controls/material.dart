@@ -1,4 +1,3 @@
-
 // /// This file is a part of .
 // ///
 // /// Copyright © 2021 & onwards,  <>.
@@ -54,13 +53,19 @@ Widget MaterialVideoControls(dynamic state) {
 }
 
 /// [MaterialVideoControlsThemeData] available in this [context].
-MaterialVideoControlsThemeData _theme(BuildContext context) => FullscreenInheritedWidget.maybeOf(context) == null ? MaterialVideoControlsTheme.maybeOf(context)?.normal ?? kDefaultMaterialVideoControlsThemeData : MaterialVideoControlsTheme.maybeOf(context)?.fullscreen ?? kDefaultMaterialVideoControlsThemeDataFullscreen;
+MaterialVideoControlsThemeData _theme(BuildContext context) =>
+    FullscreenInheritedWidget.maybeOf(context) == null
+        ? MaterialVideoControlsTheme.maybeOf(context)?.normal ??
+            kDefaultMaterialVideoControlsThemeData
+        : MaterialVideoControlsTheme.maybeOf(context)?.fullscreen ??
+            kDefaultMaterialVideoControlsThemeDataFullscreen;
 
 /// Default [MaterialVideoControlsThemeData].
 const kDefaultMaterialVideoControlsThemeData = MaterialVideoControlsThemeData();
 
 /// Default [MaterialVideoControlsThemeData] for fullscreen.
-const kDefaultMaterialVideoControlsThemeDataFullscreen = MaterialVideoControlsThemeData(
+const kDefaultMaterialVideoControlsThemeDataFullscreen =
+    MaterialVideoControlsThemeData(
   displaySeekBar: true,
   automaticallyImplySkipNextButton: true,
   automaticallyImplySkipPreviousButton: true,
@@ -387,47 +392,68 @@ class MaterialVideoControlsThemeData {
   }) {
     return MaterialVideoControlsThemeData(
       displaySeekBar: displaySeekBar ?? this.displaySeekBar,
-      automaticallyImplySkipNextButton: automaticallyImplySkipNextButton ?? this.automaticallyImplySkipNextButton,
-      automaticallyImplySkipPreviousButton: automaticallyImplySkipPreviousButton ?? this.automaticallyImplySkipPreviousButton,
+      automaticallyImplySkipNextButton: automaticallyImplySkipNextButton ??
+          this.automaticallyImplySkipNextButton,
+      automaticallyImplySkipPreviousButton:
+          automaticallyImplySkipPreviousButton ??
+              this.automaticallyImplySkipPreviousButton,
       volumeGesture: volumeGesture ?? this.volumeGesture,
       brightnessGesture: brightnessGesture ?? this.brightnessGesture,
       seekGesture: seekGesture ?? this.seekGesture,
-      gesturesEnabledWhileControlsVisible: gesturesEnabledWhileControlsVisible ?? this.gesturesEnabledWhileControlsVisible,
+      gesturesEnabledWhileControlsVisible:
+          gesturesEnabledWhileControlsVisible ??
+              this.gesturesEnabledWhileControlsVisible,
       seekOnDoubleTap: seekOnDoubleTap ?? this.seekOnDoubleTap,
-      seekOnDoubleTapEnabledWhileControlsVisible: seekOnDoubleTapEnabledWhileControlsVisible ?? this.seekOnDoubleTapEnabledWhileControlsVisible,
-      seekOnDoubleTapLayoutTapsRatios: seekOnDoubleTapLayoutTapsRatios ?? this.seekOnDoubleTapLayoutTapsRatios,
-      seekOnDoubleTapLayoutWidgetRatios: seekOnDoubleTapLayoutWidgetRatios ?? this.seekOnDoubleTapLayoutWidgetRatios,
+      seekOnDoubleTapEnabledWhileControlsVisible:
+          seekOnDoubleTapEnabledWhileControlsVisible ??
+              this.seekOnDoubleTapEnabledWhileControlsVisible,
+      seekOnDoubleTapLayoutTapsRatios: seekOnDoubleTapLayoutTapsRatios ??
+          this.seekOnDoubleTapLayoutTapsRatios,
+      seekOnDoubleTapLayoutWidgetRatios: seekOnDoubleTapLayoutWidgetRatios ??
+          this.seekOnDoubleTapLayoutWidgetRatios,
       visibleOnMount: visibleOnMount ?? this.visibleOnMount,
       speedUpOnLongPress: speedUpOnLongPress ?? this.speedUpOnLongPress,
       speedUpFactor: speedUpFactor ?? this.speedUpFactor,
-      verticalGestureSensitivity: verticalGestureSensitivity ?? this.verticalGestureSensitivity,
-      horizontalGestureSensitivity: horizontalGestureSensitivity ?? this.horizontalGestureSensitivity,
+      verticalGestureSensitivity:
+          verticalGestureSensitivity ?? this.verticalGestureSensitivity,
+      horizontalGestureSensitivity:
+          horizontalGestureSensitivity ?? this.horizontalGestureSensitivity,
       backdropColor: backdropColor ?? this.backdropColor,
-      controlsHoverDuration: controlsHoverDuration ?? this.controlsHoverDuration,
-      controlsTransitionDuration: controlsTransitionDuration ?? this.controlsTransitionDuration,
-      bufferingIndicatorBuilder: bufferingIndicatorBuilder ?? this.bufferingIndicatorBuilder,
-      volumeIndicatorBuilder: volumeIndicatorBuilder ?? this.volumeIndicatorBuilder,
-      brightnessIndicatorBuilder: brightnessIndicatorBuilder ?? this.brightnessIndicatorBuilder,
+      controlsHoverDuration:
+          controlsHoverDuration ?? this.controlsHoverDuration,
+      controlsTransitionDuration:
+          controlsTransitionDuration ?? this.controlsTransitionDuration,
+      bufferingIndicatorBuilder:
+          bufferingIndicatorBuilder ?? this.bufferingIndicatorBuilder,
+      volumeIndicatorBuilder:
+          volumeIndicatorBuilder ?? this.volumeIndicatorBuilder,
+      brightnessIndicatorBuilder:
+          brightnessIndicatorBuilder ?? this.brightnessIndicatorBuilder,
       seekIndicatorBuilder: seekIndicatorBuilder ?? this.seekIndicatorBuilder,
-      speedUpIndicatorBuilder: speedUpIndicatorBuilder ?? this.speedUpIndicatorBuilder,
+      speedUpIndicatorBuilder:
+          speedUpIndicatorBuilder ?? this.speedUpIndicatorBuilder,
       primaryButtonBar: primaryButtonBar ?? this.primaryButtonBar,
       topButtonBar: topButtonBar ?? this.topButtonBar,
       topButtonBarMargin: topButtonBarMargin ?? this.topButtonBarMargin,
       bottomButtonBar: bottomButtonBar ?? this.bottomButtonBar,
-      bottomButtonBarMargin: bottomButtonBarMargin ?? this.bottomButtonBarMargin,
+      bottomButtonBarMargin:
+          bottomButtonBarMargin ?? this.bottomButtonBarMargin,
       buttonBarHeight: buttonBarHeight ?? this.buttonBarHeight,
       buttonBarButtonSize: buttonBarButtonSize ?? this.buttonBarButtonSize,
       buttonBarButtonColor: buttonBarButtonColor ?? this.buttonBarButtonColor,
       seekBarMargin: seekBarMargin ?? this.seekBarMargin,
       seekBarHeight: seekBarHeight ?? this.seekBarHeight,
-      seekBarContainerHeight: seekBarContainerHeight ?? this.seekBarContainerHeight,
+      seekBarContainerHeight:
+          seekBarContainerHeight ?? this.seekBarContainerHeight,
       seekBarColor: seekBarColor ?? this.seekBarColor,
       seekBarPositionColor: seekBarPositionColor ?? this.seekBarPositionColor,
       seekBarBufferColor: seekBarBufferColor ?? this.seekBarBufferColor,
       seekBarThumbSize: seekBarThumbSize ?? this.seekBarThumbSize,
       seekBarThumbColor: seekBarThumbColor ?? this.seekBarThumbColor,
       seekBarAlignment: seekBarAlignment ?? this.seekBarAlignment,
-      shiftSubtitlesOnControlsVisibilityChange: shiftSubtitlesOnControlsVisibilityChange ?? this.shiftSubtitlesOnControlsVisibilityChange,
+      shiftSubtitlesOnControlsVisibilityChange:
+          shiftSubtitlesOnControlsVisibilityChange ??
+              this.shiftSubtitlesOnControlsVisibilityChange,
     );
   }
 }
@@ -454,7 +480,8 @@ class MaterialVideoControlsTheme extends InheritedWidget {
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static MaterialVideoControlsTheme? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<MaterialVideoControlsTheme>();
+    return context
+        .dependOnInheritedWidgetOfExactType<MaterialVideoControlsTheme>();
   }
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
@@ -468,7 +495,9 @@ class MaterialVideoControlsTheme extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(MaterialVideoControlsTheme oldWidget) => identical(normal, oldWidget.normal) && identical(fullscreen, oldWidget.fullscreen);
+  bool updateShouldNotify(MaterialVideoControlsTheme oldWidget) =>
+      identical(normal, oldWidget.normal) &&
+      identical(fullscreen, oldWidget.fullscreen);
 }
 
 /// {@macro material_video_controls}
@@ -495,7 +524,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
   // The default event stream in package:volume_controller is buggy.
   bool _volumeInterceptEventStream = false;
 
-  Offset _dragInitialDelta = Offset.zero; // Initial position for horizontal drag
+  Offset _dragInitialDelta =
+      Offset.zero; // Initial position for horizontal drag
   int swipeDuration = 0; // Duration to seek in video
   bool showSwipeDuration = false; // Whether to show the seek duration overlay
 
@@ -510,11 +540,17 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
   Timer? _timerSeekBackwardButton;
   Timer? _timerSeekForwardButton;
 
-  final ValueNotifier<Duration> _seekBarDeltaValueNotifier = ValueNotifier<Duration>(Duration.zero);
+  final ValueNotifier<Duration> _seekBarDeltaValueNotifier =
+      ValueNotifier<Duration>(Duration.zero);
 
   final List<StreamSubscription> subscriptions = [];
 
-  double get subtitleVerticalShiftOffset => (_theme(context).padding?.bottom ?? 0.0) + (_theme(context).bottomButtonBarMargin.vertical) + (_theme(context).bottomButtonBar.isNotEmpty ? _theme(context).buttonBarHeight : 0.0);
+  double get subtitleVerticalShiftOffset =>
+      (_theme(context).padding?.bottom ?? 0.0) +
+      (_theme(context).bottomButtonBarMargin.vertical) +
+      (_theme(context).bottomButtonBar.isNotEmpty
+          ? _theme(context).buttonBarHeight
+          : 0.0);
   Offset? _tapPosition;
 
   void _handleDoubleTapDown(TapDownDetails details) {
@@ -595,7 +631,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
   void shiftSubtitle() {
     if (_theme(context).shiftSubtitlesOnControlsVisibilityChange) {
       state(context).setSubtitleViewPadding(
-        state(context).widget.subtitleViewConfiguration.padding + EdgeInsets.fromLTRB(0.0, 0.0, 0.0, subtitleVerticalShiftOffset),
+        state(context).widget.subtitleViewConfiguration.padding +
+            EdgeInsets.fromLTRB(0.0, 0.0, 0.0, subtitleVerticalShiftOffset),
       );
     }
   }
@@ -655,7 +692,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
     final duration = controller(context).player.state.duration.inSeconds;
     final position = controller(context).player.state.position.inSeconds;
 
-    final seconds = -(diff * duration / _theme(context).horizontalGestureSensitivity).round();
+    final seconds =
+        -(diff * duration / _theme(context).horizontalGestureSensitivity)
+            .round();
     final relativePosition = position + seconds;
 
     if (relativePosition <= duration && relativePosition >= 0) {
@@ -669,7 +708,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
 
   void onHorizontalDragEnd() {
     if (swipeDuration != 0) {
-      Duration newPosition = controller(context).player.state.position + Duration(seconds: swipeDuration);
+      Duration newPosition = controller(context).player.state.position +
+          Duration(seconds: swipeDuration);
       newPosition = newPosition.clamp(
         Duration.zero,
         controller(context).player.state.duration,
@@ -819,7 +859,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
 
   @override
   Widget build(BuildContext context) {
-    var seekOnDoubleTapEnabledWhileControlsAreVisible = (_theme(context).seekOnDoubleTap && _theme(context).seekOnDoubleTapEnabledWhileControlsVisible);
+    var seekOnDoubleTapEnabledWhileControlsAreVisible =
+        (_theme(context).seekOnDoubleTap &&
+            _theme(context).seekOnDoubleTapEnabledWhileControlsVisible);
     assert(
       _theme(context).seekOnDoubleTapLayoutTapsRatios.length == 3,
       "The number of seekOnDoubleTapLayoutTapsRatios must be 3, i.e. [1, 1, 1]",
@@ -879,26 +921,36 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                         child: GestureDetector(
                           onTapDown: (details) => _handleTapDown(details),
                           onDoubleTapDown: _handleDoubleTapDown,
-                          onLongPress: _theme(context).speedUpOnLongPress ? _handleLongPress : null,
-                          onLongPressEnd: _theme(context).speedUpOnLongPress ? _handleLongPressEnd : null,
+                          onLongPress: _theme(context).speedUpOnLongPress
+                              ? _handleLongPress
+                              : null,
+                          onLongPressEnd: _theme(context).speedUpOnLongPress
+                              ? _handleLongPressEnd
+                              : null,
                           onDoubleTap: () {
                             if (_tapPosition == null) {
                               return;
                             }
                             if (_isInRightSegment(_tapPosition!.dx)) {
-                              if ((!mount && _theme(context).seekOnDoubleTap) || seekOnDoubleTapEnabledWhileControlsAreVisible) {
+                              if ((!mount && _theme(context).seekOnDoubleTap) ||
+                                  seekOnDoubleTapEnabledWhileControlsAreVisible) {
                                 onDoubleTapSeekForward();
                               }
                             } else {
                               if (_isInLeftSegment(_tapPosition!.dx)) {
-                                if ((!mount && _theme(context).seekOnDoubleTap) || seekOnDoubleTapEnabledWhileControlsAreVisible) {
+                                if ((!mount &&
+                                        _theme(context).seekOnDoubleTap) ||
+                                    seekOnDoubleTapEnabledWhileControlsAreVisible) {
                                   onDoubleTapSeekBackward();
                                 }
                               }
                             }
                           },
                           onHorizontalDragUpdate: (details) {
-                            if ((!mount && _theme(context).seekGesture) || (_theme(context).seekGesture && _theme(context).gesturesEnabledWhileControlsVisible)) {
+                            if ((!mount && _theme(context).seekGesture) ||
+                                (_theme(context).seekGesture &&
+                                    _theme(context)
+                                        .gesturesEnabledWhileControlsVisible)) {
                               onHorizontalDragUpdate(details);
                             }
                           },
@@ -911,16 +963,29 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
 
                             if (position.dx <= widgetWidth(context) / 2) {
                               // Left side of screen swiped
-                              if ((!mount && _theme(context).brightnessGesture) || (_theme(context).brightnessGesture && _theme(context).gesturesEnabledWhileControlsVisible)) {
-                                final brightness = _brightnessValue - delta / _theme(context).verticalGestureSensitivity;
+                              if ((!mount &&
+                                      _theme(context).brightnessGesture) ||
+                                  (_theme(context).brightnessGesture &&
+                                      _theme(context)
+                                          .gesturesEnabledWhileControlsVisible)) {
+                                final brightness = _brightnessValue -
+                                    delta /
+                                        _theme(context)
+                                            .verticalGestureSensitivity;
                                 final result = brightness.clamp(0.0, 1.0);
                                 setBrightness(result);
                               }
                             } else {
                               // Right side of screen swiped
 
-                              if ((!mount && _theme(context).volumeGesture) || (_theme(context).volumeGesture && _theme(context).gesturesEnabledWhileControlsVisible)) {
-                                final volume = _volumeValue - delta / _theme(context).verticalGestureSensitivity;
+                              if ((!mount && _theme(context).volumeGesture) ||
+                                  (_theme(context).volumeGesture &&
+                                      _theme(context)
+                                          .gesturesEnabledWhileControlsVisible)) {
+                                final volume = _volumeValue -
+                                    delta /
+                                        _theme(context)
+                                            .verticalGestureSensitivity;
                                 final result = volume.clamp(0.0, 1.0);
                                 setVolume(result);
                               }
@@ -935,7 +1000,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                         padding: _theme(context).padding ??
                             (
                                 // Add padding in fullscreen!
-                                isFullscreen(context) ? MediaQuery.of(context).padding : EdgeInsets.zero),
+                                isFullscreen(context)
+                                    ? MediaQuery.of(context).padding
+                                    : EdgeInsets.zero),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -956,12 +1023,14 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                               child: AnimatedOpacity(
                                 curve: Curves.easeInOut,
                                 opacity: buffering ? 0.0 : 1.0,
-                                duration: _theme(context).controlsTransitionDuration,
+                                duration:
+                                    _theme(context).controlsTransitionDuration,
                                 child: Center(
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: _theme(context).primaryButtonBar,
                                   ),
                                 ),
@@ -976,7 +1045,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                       _timer?.cancel();
                                     },
                                     onSeekEnd: () {
-                                      _timer = Timer(_theme(context).controlsHoverDuration, () {
+                                      _timer = Timer(
+                                          _theme(context).controlsHoverDuration,
+                                          () {
                                         if (mounted) {
                                           setState(() {
                                             visible = false;
@@ -992,7 +1063,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: _theme(context).bottomButtonBar,
                                   ),
                                 ),
@@ -1006,14 +1078,17 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
               ),
               // Double-Tap Seek Seek-Bar:
               if (!mount)
-                if (_mountSeekBackwardButton || _mountSeekForwardButton || showSwipeDuration)
+                if (_mountSeekBackwardButton ||
+                    _mountSeekForwardButton ||
+                    showSwipeDuration)
                   Column(
                     children: [
                       const Spacer(),
                       Stack(
                         alignment: Alignment.bottomCenter,
                         children: [
-                          if (_theme(context).displaySeekBar) MaterialSeekBar(delta: _seekBarDeltaValueNotifier),
+                          if (_theme(context).displaySeekBar)
+                            MaterialSeekBar(delta: _seekBarDeltaValueNotifier),
                           Container(
                             height: _theme(context).buttonBarHeight,
                             margin: _theme(context).bottomButtonBarMargin,
@@ -1028,7 +1103,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                   padding: _theme(context).padding ??
                       (
                           // Add padding in fullscreen!
-                          isFullscreen(context) ? MediaQuery.of(context).padding : EdgeInsets.zero),
+                          isFullscreen(context)
+                              ? MediaQuery.of(context).padding
+                              : EdgeInsets.zero),
                   child: Column(
                     children: [
                       Container(
@@ -1042,14 +1119,18 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                               begin: 0.0,
                               end: buffering ? 1.0 : 0.0,
                             ),
-                            duration: _theme(context).controlsTransitionDuration,
+                            duration:
+                                _theme(context).controlsTransitionDuration,
                             builder: (context, value, child) {
                               // Only mount the buffering indicator if the opacity is greater than 0.0.
                               // This has been done to prevent redundant resource usage in [CircularProgressIndicator].
                               if (value > 0.0) {
                                 return Opacity(
                                   opacity: value,
-                                  child: _theme(context).bufferingIndicatorBuilder?.call(context) ?? child!,
+                                  child: _theme(context)
+                                          .bufferingIndicatorBuilder
+                                          ?.call(context) ??
+                                      child!,
                                 );
                               }
                               return const SizedBox.shrink();
@@ -1072,9 +1153,16 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
               IgnorePointer(
                 child: AnimatedOpacity(
                   curve: Curves.easeInOut,
-                  opacity: (!mount || _theme(context).gesturesEnabledWhileControlsVisible) && _volumeIndicator ? 1.0 : 0.0,
+                  opacity: (!mount ||
+                              _theme(context)
+                                  .gesturesEnabledWhileControlsVisible) &&
+                          _volumeIndicator
+                      ? 1.0
+                      : 0.0,
                   duration: _theme(context).controlsTransitionDuration,
-                  child: _theme(context).volumeIndicatorBuilder?.call(context, _volumeValue) ??
+                  child: _theme(context)
+                          .volumeIndicatorBuilder
+                          ?.call(context, _volumeValue) ??
                       Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -1123,9 +1211,16 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
               IgnorePointer(
                 child: AnimatedOpacity(
                   curve: Curves.easeInOut,
-                  opacity: (!mount || _theme(context).gesturesEnabledWhileControlsVisible) && _brightnessIndicator ? 1.0 : 0.0,
+                  opacity: (!mount ||
+                              _theme(context)
+                                  .gesturesEnabledWhileControlsVisible) &&
+                          _brightnessIndicator
+                      ? 1.0
+                      : 0.0,
                   duration: _theme(context).controlsTransitionDuration,
-                  child: _theme(context).brightnessIndicatorBuilder?.call(context, _volumeValue) ??
+                  child: _theme(context)
+                          .brightnessIndicatorBuilder
+                          ?.call(context, _volumeValue) ??
                       Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -1176,7 +1271,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                   padding: _theme(context).padding ??
                       (
                           // Add padding in fullscreen!
-                          isFullscreen(context) ? MediaQuery.of(context).padding : EdgeInsets.zero),
+                          isFullscreen(context)
+                              ? MediaQuery.of(context).padding
+                              : EdgeInsets.zero),
                   child: Column(
                     children: [
                       Container(
@@ -1205,7 +1302,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       const SizedBox(width: 16.0),
                                       Expanded(
@@ -1263,7 +1361,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                         height: 52.0,
                         width: 108.0,
                         child: Text(
-                          swipeDuration > 0 ? "+ ${Duration(seconds: swipeDuration).label()}" : "- ${Duration(seconds: swipeDuration).label()}",
+                          swipeDuration > 0
+                              ? "+ ${Duration(seconds: swipeDuration).label()}"
+                              : "- ${Duration(seconds: swipeDuration).label()}",
                           textAlign: TextAlign.center,
                           style: const TextStyle(
                             fontSize: 14.0,
@@ -1281,7 +1381,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                     child: Row(
                       children: [
                         Expanded(
-                          flex: _theme(context).seekOnDoubleTapLayoutWidgetRatios[0],
+                          flex: _theme(context)
+                              .seekOnDoubleTapLayoutWidgetRatios[0],
                           child: _mountSeekBackwardButton
                               ? AnimatedOpacity(
                                   opacity: _hideSeekBackwardButton ? 0 : 1.0,
@@ -1292,7 +1393,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                     },
                                     onSubmitted: (value) {
                                       _timerSeekBackwardButton?.cancel();
-                                      _timerSeekBackwardButton = Timer(const Duration(milliseconds: 200), () {
+                                      _timerSeekBackwardButton = Timer(
+                                          const Duration(milliseconds: 200),
+                                          () {
                                         setState(() {
                                           _hideSeekBackwardButton = false;
                                           _mountSeekBackwardButton = false;
@@ -1302,10 +1405,17 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                       setState(() {
                                         _hideSeekBackwardButton = true;
                                       });
-                                      var result = controller(context).player.state.position - value;
+                                      var result = controller(context)
+                                              .player
+                                              .state
+                                              .position -
+                                          value;
                                       result = result.clamp(
                                         Duration.zero,
-                                        controller(context).player.state.duration,
+                                        controller(context)
+                                            .player
+                                            .state
+                                            .duration,
                                       );
                                       controller(context).player.seek(result);
                                     },
@@ -1314,13 +1424,17 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                               : const SizedBox(),
                         ),
                         //Area in the middle where the double-tap seek buttons are ignored in
-                        if (_theme(context).seekOnDoubleTapLayoutWidgetRatios[1] > 0)
+                        if (_theme(context)
+                                .seekOnDoubleTapLayoutWidgetRatios[1] >
+                            0)
                           Expanded(
-                            flex: _theme(context).seekOnDoubleTapLayoutWidgetRatios[1],
+                            flex: _theme(context)
+                                .seekOnDoubleTapLayoutWidgetRatios[1],
                             child: SizedBox(),
                           ),
                         Expanded(
-                          flex: _theme(context).seekOnDoubleTapLayoutWidgetRatios[2],
+                          flex: _theme(context)
+                              .seekOnDoubleTapLayoutWidgetRatios[2],
                           child: _mountSeekForwardButton
                               ? AnimatedOpacity(
                                   opacity: _hideSeekForwardButton ? 0 : 1.0,
@@ -1331,7 +1445,9 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                     },
                                     onSubmitted: (value) {
                                       _timerSeekForwardButton?.cancel();
-                                      _timerSeekForwardButton = Timer(const Duration(milliseconds: 200), () {
+                                      _timerSeekForwardButton = Timer(
+                                          const Duration(milliseconds: 200),
+                                          () {
                                         if (_hideSeekForwardButton) {
                                           setState(() {
                                             _hideSeekForwardButton = false;
@@ -1343,10 +1459,17 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
                                         _hideSeekForwardButton = true;
                                       });
 
-                                      var result = controller(context).player.state.position + value;
+                                      var result = controller(context)
+                                              .player
+                                              .state
+                                              .position +
+                                          value;
                                       result = result.clamp(
                                         Duration.zero,
-                                        controller(context).player.state.duration,
+                                        controller(context)
+                                            .player
+                                            .state
+                                            .duration,
                                       );
                                       controller(context).player.seek(result);
                                     },
@@ -1364,7 +1487,8 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
     );
   }
 
-  double widgetWidth(BuildContext context) => (context.findRenderObject() as RenderBox).paintBounds.width;
+  double widgetWidth(BuildContext context) =>
+      (context.findRenderObject() as RenderBox).paintBounds.width;
 }
 
 // SEEK BAR
@@ -1598,15 +1722,24 @@ class MaterialSeekBarState extends State<MaterialSeekBar> {
                             color: _theme(context).seekBarBufferColor,
                           ),
                           Container(
-                            width: tapped ? constraints.maxWidth * slider : constraints.maxWidth * positionPercent,
+                            width: tapped
+                                ? constraints.maxWidth * slider
+                                : constraints.maxWidth * positionPercent,
                             color: _theme(context).seekBarPositionColor,
                           ),
                         ],
                       ),
                     ),
                     Positioned(
-                      left: tapped ? (constraints.maxWidth - _theme(context).seekBarThumbSize / 2) * slider : (constraints.maxWidth - _theme(context).seekBarThumbSize / 2) * positionPercent,
-                      bottom: -1.0 * _theme(context).seekBarThumbSize / 2 + _theme(context).seekBarHeight / 2,
+                      left: tapped
+                          ? (constraints.maxWidth -
+                                  _theme(context).seekBarThumbSize / 2) *
+                              slider
+                          : (constraints.maxWidth -
+                                  _theme(context).seekBarThumbSize / 2) *
+                              positionPercent,
+                      bottom: -1.0 * _theme(context).seekBarThumbSize / 2 +
+                          _theme(context).seekBarHeight / 2,
                       child: Container(
                         width: _theme(context).seekBarThumbSize,
                         height: _theme(context).seekBarThumbSize,
@@ -1643,11 +1776,13 @@ class MaterialPlayOrPauseButton extends StatefulWidget {
   const MaterialPlayOrPauseButton({super.key, this.iconSize, this.iconColor});
 
   @override
-  MaterialPlayOrPauseButtonState createState() => MaterialPlayOrPauseButtonState();
+  MaterialPlayOrPauseButtonState createState() =>
+      MaterialPlayOrPauseButtonState();
 }
 
 /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-class MaterialPlayOrPauseButtonState extends State<MaterialPlayOrPauseButton> with SingleTickerProviderStateMixin {
+class MaterialPlayOrPauseButtonState extends State<MaterialPlayOrPauseButton>
+    with SingleTickerProviderStateMixin {
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   late final animation = AnimationController(
     vsync: this,
@@ -1725,7 +1860,9 @@ class MaterialSkipNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!_theme(context).automaticallyImplySkipNextButton || (controller(context).player.state.playlist.medias.length > 1 && _theme(context).automaticallyImplySkipNextButton)) {
+    if (!_theme(context).automaticallyImplySkipNextButton ||
+        (controller(context).player.state.playlist.medias.length > 1 &&
+            _theme(context).automaticallyImplySkipNextButton)) {
       return IconButton(
         onPressed: controller(context).player.next,
         icon: icon ?? const Icon(Icons.skip_next),
@@ -1760,7 +1897,9 @@ class MaterialSkipPreviousButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!_theme(context).automaticallyImplySkipPreviousButton || (controller(context).player.state.playlist.medias.length > 1 && _theme(context).automaticallyImplySkipPreviousButton)) {
+    if (!_theme(context).automaticallyImplySkipPreviousButton ||
+        (controller(context).player.state.playlist.medias.length > 1 &&
+            _theme(context).automaticallyImplySkipPreviousButton)) {
       return IconButton(
         onPressed: controller(context).player.previous,
         icon: icon ?? const Icon(Icons.skip_previous),
@@ -1797,7 +1936,10 @@ class MaterialFullscreenButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () => toggleFullscreen(context),
-      icon: icon ?? (isFullscreen(context) ? const Icon(Icons.fullscreen_exit) : const Icon(Icons.fullscreen)),
+      icon: icon ??
+          (isFullscreen(context)
+              ? const Icon(Icons.fullscreen_exit)
+              : const Icon(Icons.fullscreen)),
       iconSize: iconSize ?? _theme(context).buttonBarButtonSize,
       color: iconColor ?? _theme(context).buttonBarButtonColor,
     );
@@ -1852,7 +1994,8 @@ class MaterialPositionIndicator extends StatefulWidget {
   const MaterialPositionIndicator({super.key, this.style});
 
   @override
-  MaterialPositionIndicatorState createState() => MaterialPositionIndicatorState();
+  MaterialPositionIndicatorState createState() =>
+      MaterialPositionIndicatorState();
 }
 
 /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer

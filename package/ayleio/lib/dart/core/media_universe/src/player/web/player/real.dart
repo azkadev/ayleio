@@ -69,10 +69,12 @@ class WebPlayer extends PlatformPlayer {
         ..pause();
       // Initialize or increment the instance count.
       globalContext[kInstanceCount] ??= 0.toJS;
-      globalContext[kInstanceCount] = (int.parse((globalContext[kInstanceCount]!).toString()) + 1).toJS;
+      globalContext[kInstanceCount] =
+          (int.parse((globalContext[kInstanceCount]!).toString()) + 1).toJS;
       // Store the [html.VideoElement] instance in [globalContext].
       globalContext[kInstances] ??= JSObject();
-      (globalContext[kInstances] as JSObject).setProperty(id.toString().toJS, element);
+      (globalContext[kInstances] as JSObject)
+          .setProperty(id.toString().toJS, element);
       // --------------------------------------------------
       // Event streams handling:
       element.onPlay.listen((_) {
@@ -115,7 +117,8 @@ class WebPlayer extends PlatformPlayer {
       element.onTimeUpdate.listen((_) {
         lock.synchronized(() async {
           // PlayerState.state.position & PlayerState.stream.position
-          Duration? position = convertNumVideoDurationToPluginDuration(element.currentTime);
+          Duration? position =
+              convertNumVideoDurationToPluginDuration(element.currentTime);
 
           // Clamp between current [Media]'s start & end.
           try {
@@ -164,7 +167,8 @@ class WebPlayer extends PlatformPlayer {
       element.onDurationChange.listen((_) {
         lock.synchronized(() async {
           // PlayerState.state.duration & PlayerState.stream.duration
-          final duration = convertNumVideoDurationToPluginDuration(element.duration);
+          final duration =
+              convertNumVideoDurationToPluginDuration(element.duration);
           if (duration != null) {
             state = state.copyWith(duration: duration);
             if (!durationController.isClosed) {
@@ -289,11 +293,13 @@ class WebPlayer extends PlatformPlayer {
 
       await pause(synchronized: false);
 
-      state = state.copyWith(track: state.track.copyWith(video: VideoTrack.no()));
+      state =
+          state.copyWith(track: state.track.copyWith(video: VideoTrack.no()));
       if (!trackController.isClosed) {
         trackController.add(state.track);
       }
-      state = state.copyWith(track: state.track.copyWith(audio: AudioTrack.no()));
+      state =
+          state.copyWith(track: state.track.copyWith(audio: AudioTrack.no()));
       if (!trackController.isClosed) {
         trackController.add(state.track);
       }
@@ -582,7 +588,8 @@ class WebPlayer extends PlatformPlayer {
 
       _playlist = [..._playlist, media];
 
-      state = state.copyWith(playlist: state.playlist.copyWith(medias: _playlist));
+      state =
+          state.copyWith(playlist: state.playlist.copyWith(medias: _playlist));
       if (!playlistController.isClosed) {
         playlistController.add(state.playlist);
       }
@@ -606,7 +613,9 @@ class WebPlayer extends PlatformPlayer {
 
       // If we remove the last item in the playlist while playlist mode is none or single, then playback will stop.
       // In this situation, the playlist doesn't seem to be updated, so we manually update it.
-      if (_index == index && _playlist.length - 1 == index && [PlaylistMode.none, PlaylistMode.single].contains(_playlistMode)) {
+      if (_index == index &&
+          _playlist.length - 1 == index &&
+          [PlaylistMode.none, PlaylistMode.single].contains(_playlistMode)) {
         _index = _playlist.length - 2 < 0 ? 0 : _playlist.length - 2;
 
         state = state.copyWith(
@@ -625,7 +634,9 @@ class WebPlayer extends PlatformPlayer {
         }
       }
       // If we remove the last item in the playlist while playlist mode is loop, jump to the index 0.
-      else if (_index == index && _playlist.length - 1 == index && _playlistMode == PlaylistMode.loop) {
+      else if (_index == index &&
+          _playlist.length - 1 == index &&
+          _playlistMode == PlaylistMode.loop) {
         element.innerHTML = ''.toJS;
         state = state.copyWith(track: const Track());
         if (!trackController.isClosed) {
@@ -688,7 +699,8 @@ class WebPlayer extends PlatformPlayer {
       await waitForVideoControllerInitializationIfAttached;
 
       Future<void> start() async {
-        state = state.copyWith(playlist: state.playlist.copyWith(index: _index));
+        state =
+            state.copyWith(playlist: state.playlist.copyWith(index: _index));
         if (!playlistController.isClosed) {
           playlistController.add(state.playlist);
         }
@@ -754,7 +766,8 @@ class WebPlayer extends PlatformPlayer {
       await waitForVideoControllerInitializationIfAttached;
 
       Future<void> start() async {
-        state = state.copyWith(playlist: state.playlist.copyWith(index: _index));
+        state =
+            state.copyWith(playlist: state.playlist.copyWith(index: _index));
         if (!playlistController.isClosed) {
           playlistController.add(state.playlist);
         }
@@ -869,7 +882,9 @@ class WebPlayer extends PlatformPlayer {
 
       final current = _index;
 
-      _index = keys.contains(current * 1.0) ? keys.indexOf(current * 1.0) : keys.indexOf(to - 0.5);
+      _index = keys.contains(current * 1.0)
+          ? keys.indexOf(current * 1.0)
+          : keys.indexOf(to - 0.5);
       _playlist = values;
       // ---------------------------------------------
 
@@ -1033,7 +1048,8 @@ class WebPlayer extends PlatformPlayer {
         }
         _index = _playlist.indexOf(current);
 
-        state = state.copyWith(playlist: Playlist([..._playlist], index: _index));
+        state =
+            state.copyWith(playlist: Playlist([..._playlist], index: _index));
         if (!playlistController.isClosed) {
           playlistController.add(state.playlist);
         }
@@ -1043,7 +1059,8 @@ class WebPlayer extends PlatformPlayer {
         _index = _playlist.indexOf(current);
         _shuffle.clear();
 
-        state = state.copyWith(playlist: Playlist([..._playlist], index: _index));
+        state =
+            state.copyWith(playlist: Playlist([..._playlist], index: _index));
         if (!playlistController.isClosed) {
           playlistController.add(state.playlist);
         }
@@ -1232,7 +1249,10 @@ class WebPlayer extends PlatformPlayer {
                 final data = List<String>.from(
                   (activeCues.dartify as dynamic).map((cue) {
                     final text = (cue as dynamic).text as String;
-                    return text.replaceAll(RegExp('<[^>]*>'), ' ').replaceAll(RegExp('\\s+'), ' ').trim();
+                    return text
+                        .replaceAll(RegExp('<[^>]*>'), ' ')
+                        .replaceAll(RegExp('\\s+'), ' ')
+                        .trim();
                   }),
                 );
 
@@ -1334,7 +1354,9 @@ class WebPlayer extends PlatformPlayer {
 
         final hls = Hls(
           HlsOptions(
-            xhrSetup: media.httpHeaders != null ? setHlsHTTPHeaders.toJS as XHRSetupCallback : null,
+            xhrSetup: media.httpHeaders != null
+                ? setHlsHTTPHeaders.toJS as XHRSetupCallback
+                : null,
           ),
         );
 
@@ -1365,9 +1387,11 @@ class WebPlayer extends PlatformPlayer {
 
   bool _isHLS(String src) {
     final userAgent = web.window.navigator.userAgent;
-    final isAndroidChrome = userAgent.contains("Android") && userAgent.contains("Chrome");
+    final isAndroidChrome =
+        userAgent.contains("Android") && userAgent.contains("Chrome");
 
-    if (!isAndroidChrome && element.canPlayType('application/vnd.apple.mpegurl') != '') {
+    if (!isAndroidChrome &&
+        element.canPlayType('application/vnd.apple.mpegurl') != '') {
       return false;
     }
     if (isHLSSupported() && src.toLowerCase().contains('m3u8')) {
@@ -1477,10 +1501,12 @@ class WebPlayer extends PlatformPlayer {
   final Lock lock = Lock();
 
   /// JavaScript object attribute used to store various [VideoElement] instances in [js.context].
-  static const kInstances = '\$general_developer.library.media_universe.media_universe_flutter.instances';
+  static const kInstances =
+      '\$general_developer.library.media_universe.media_universe_flutter.instances';
 
   /// JavaScript object attribute used to store the instance count of [Player] in [js.context].
-  static const kInstanceCount = '\$general_developer.library.media_universe.media_universe_flutter.instance_count';
+  static const kInstanceCount =
+      '\$general_developer.library.media_universe.media_universe_flutter.instance_count';
 
   /// Whether the [WebPlayer] is initialized for unit-testing.
   @visibleForTesting

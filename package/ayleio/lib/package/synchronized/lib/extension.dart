@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:ayleio/package/synchronized/lib/src/extension_impl.dart' as impl;
+import 'package:ayleio/package/synchronized/lib/src/extension_impl.dart'
+    as impl;
 
 /// Add lock ability to any object.
 ///

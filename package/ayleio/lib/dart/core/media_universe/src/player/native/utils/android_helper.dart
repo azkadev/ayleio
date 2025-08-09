@@ -8,10 +8,10 @@ library;
 // ignore_for_file: non_constant_identifier_names, camel_case_types
 import 'dart:io';
 // import 'dart:ffi';
-import 'dart:ffi' ;
+import 'dart:ffi';
 
 import 'package:ayleio/dart/core/media_universe/ffi/ffi.dart';
- 
+
 /// {@template android_helper}
 ///
 /// AndroidHelper
@@ -37,32 +37,49 @@ abstract class AndroidHelper {
           libavcodec = DynamicLibrary.open('libavcodec.so');
         } catch (_) {}
         try {
-          libmediakitandroidhelper = DynamicLibrary.open('libmediakitandroidhelper.so');
+          libmediakitandroidhelper =
+              DynamicLibrary.open('libmediakitandroidhelper.so');
         } catch (_) {}
         // Look for the required symbols.
         try {
-          _mpv_lavc_set_java_vm = libmpv?.lookupFunction<mpv_lavc_set_java_vmCXX, mpv_lavc_set_java_vmDart>('mpv_lavc_set_java_vm');
+          _mpv_lavc_set_java_vm = libmpv?.lookupFunction<
+              mpv_lavc_set_java_vmCXX,
+              mpv_lavc_set_java_vmDart>('mpv_lavc_set_java_vm');
         } catch (_) {}
         try {
-          _av_jni_set_java_vm = libavcodec?.lookupFunction<av_jni_set_java_vmCXX, av_jni_set_java_vmDart>('av_jni_set_java_vm');
+          _av_jni_set_java_vm = libavcodec?.lookupFunction<
+              av_jni_set_java_vmCXX,
+              av_jni_set_java_vmDart>('av_jni_set_java_vm');
         } catch (_) {}
         try {
-          _MediaKitAndroidHelperGetJavaVM = libmediakitandroidhelper?.lookupFunction<MediaKitAndroidHelperGetJavaVMCXX, MediaKitAndroidHelperGetJavaVMDart>(
+          _MediaKitAndroidHelperGetJavaVM =
+              libmediakitandroidhelper?.lookupFunction<
+                  MediaKitAndroidHelperGetJavaVMCXX,
+                  MediaKitAndroidHelperGetJavaVMDart>(
             'MediaKitAndroidHelperGetJavaVM',
           );
         } catch (_) {}
         try {
-          MediaKitAndroidHelperGetFilesDir = libmediakitandroidhelper?.lookupFunction<MediaKitAndroidHelperGetFilesDirCXX, MediaKitAndroidHelperGetFilesDirDart>(
+          MediaKitAndroidHelperGetFilesDir =
+              libmediakitandroidhelper?.lookupFunction<
+                  MediaKitAndroidHelperGetFilesDirCXX,
+                  MediaKitAndroidHelperGetFilesDirDart>(
             'MediaKitAndroidHelperGetFilesDir',
           );
         } catch (_) {}
         try {
-          _MediaKitAndroidHelperIsEmulator = libmediakitandroidhelper?.lookupFunction<MediaKitAndroidHelperIsEmulatorCXX, MediaKitAndroidHelperIsEmulatorDart>(
+          _MediaKitAndroidHelperIsEmulator =
+              libmediakitandroidhelper?.lookupFunction<
+                  MediaKitAndroidHelperIsEmulatorCXX,
+                  MediaKitAndroidHelperIsEmulatorDart>(
             'MediaKitAndroidHelperIsEmulator',
           );
         } catch (_) {}
         try {
-          _MediaKitAndroidHelperGetAPILevel = libmediakitandroidhelper?.lookupFunction<MediaKitAndroidHelperGetAPILevelCXX, MediaKitAndroidHelperGetAPILevelDart>(
+          _MediaKitAndroidHelperGetAPILevel =
+              libmediakitandroidhelper?.lookupFunction<
+                  MediaKitAndroidHelperGetAPILevelCXX,
+                  MediaKitAndroidHelperGetAPILevelDart>(
             'MediaKitAndroidHelperGetAPILevel',
           );
         } catch (_) {}
@@ -146,7 +163,8 @@ abstract class AndroidHelper {
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static MediaKitAndroidHelperGetFilesDirDart? MediaKitAndroidHelperGetFilesDir;
   static MediaKitAndroidHelperIsEmulatorDart? _MediaKitAndroidHelperIsEmulator;
-  static MediaKitAndroidHelperGetAPILevelDart? _MediaKitAndroidHelperGetAPILevel;
+  static MediaKitAndroidHelperGetAPILevelDart?
+      _MediaKitAndroidHelperGetAPILevel;
 }
 
 /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer

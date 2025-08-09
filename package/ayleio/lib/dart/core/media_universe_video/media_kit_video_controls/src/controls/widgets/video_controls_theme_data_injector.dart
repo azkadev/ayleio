@@ -40,16 +40,20 @@ class VideoControlsThemeDataInjector extends StatefulWidget {
   });
 
   @override
-  State<VideoControlsThemeDataInjector> createState() => _VideoControlsThemeDataInjectorState();
+  State<VideoControlsThemeDataInjector> createState() =>
+      _VideoControlsThemeDataInjectorState();
 }
 
-class _VideoControlsThemeDataInjectorState extends State<VideoControlsThemeDataInjector> {
+class _VideoControlsThemeDataInjectorState
+    extends State<VideoControlsThemeDataInjector> {
   late final builders = <Widget Function(Widget)>[
     // CupertinoVideoControlsTheme
     (child) {
-      final theme = CupertinoVideoControlsTheme.maybeOf(widget.context ?? context);
+      final theme =
+          CupertinoVideoControlsTheme.maybeOf(widget.context ?? context);
       final normal = theme?.normal ?? kDefaultCupertinoVideoControlsThemeData;
-      final fullscreen = theme?.fullscreen ?? kDefaultCupertinoVideoControlsThemeDataFullscreen;
+      final fullscreen = theme?.fullscreen ??
+          kDefaultCupertinoVideoControlsThemeDataFullscreen;
       return CupertinoVideoControlsTheme(
         normal: normal,
         fullscreen: fullscreen,
@@ -58,9 +62,11 @@ class _VideoControlsThemeDataInjectorState extends State<VideoControlsThemeDataI
     },
     // MaterialVideoControlsTheme
     (child) {
-      final theme = MaterialVideoControlsTheme.maybeOf(widget.context ?? context);
+      final theme =
+          MaterialVideoControlsTheme.maybeOf(widget.context ?? context);
       final normal = theme?.normal ?? kDefaultMaterialVideoControlsThemeData;
-      final fullscreen = theme?.fullscreen ?? kDefaultMaterialVideoControlsThemeDataFullscreen;
+      final fullscreen =
+          theme?.fullscreen ?? kDefaultMaterialVideoControlsThemeDataFullscreen;
       return MaterialVideoControlsTheme(
         normal: normal,
         fullscreen: fullscreen,
@@ -69,9 +75,12 @@ class _VideoControlsThemeDataInjectorState extends State<VideoControlsThemeDataI
     },
     // MaterialDesktopVideoControlsTheme
     (child) {
-      final theme = MaterialDesktopVideoControlsTheme.maybeOf(widget.context ?? context);
-      final normal = theme?.normal ?? kDefaultMaterialDesktopVideoControlsThemeData;
-      final fullscreen = theme?.fullscreen ?? kDefaultMaterialDesktopVideoControlsThemeDataFullscreen;
+      final theme =
+          MaterialDesktopVideoControlsTheme.maybeOf(widget.context ?? context);
+      final normal =
+          theme?.normal ?? kDefaultMaterialDesktopVideoControlsThemeData;
+      final fullscreen = theme?.fullscreen ??
+          kDefaultMaterialDesktopVideoControlsThemeDataFullscreen;
       return MaterialDesktopVideoControlsTheme(
         normal: normal,
         fullscreen: fullscreen,

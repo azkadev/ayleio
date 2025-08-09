@@ -137,7 +137,9 @@ class SafeLocalStorage {
     }
   }
 
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static const int kHistoryCount = 10;
+/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static const String kHistoryDirectoryName = '.History';
 }
 

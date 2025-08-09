@@ -55,7 +55,8 @@ class WebVideoController extends PlatformVideoController {
     // web.window.getProperty(_kInstances.toJS).dartify();
     //
 
-    controller._element = (web.window.getProperty(_kInstances.toJS) as JSObject)["${handle}"] as web.HTMLVideoElement;
+    controller._element = (web.window.getProperty(_kInstances.toJS)
+        as JSObject)["${handle}"] as web.HTMLVideoElement;
     // Register the [html.VideoElement] as platform view.
     platformViewRegistry.registerViewFactory(
       'general_developer.library.media_universe.$handle',
@@ -67,7 +68,8 @@ class WebVideoController extends PlatformVideoController {
     controller.id.value = handle;
 
     // Listen to the resize event of the [html.VideoElement].
-    controller._resizeStreamSubscription = controller._element?.onResize.listen((event) {
+    controller._resizeStreamSubscription =
+        controller._element?.onResize.listen((event) {
       // Update the size of the [PlatformVideoController].
       controller.rect.value = Rect.fromLTWH(
         0.0,
@@ -121,5 +123,6 @@ class WebVideoController extends PlatformVideoController {
   StreamSubscription<web.Event>? _resizeStreamSubscription;
 
   /// JavaScript object attribute used to store various [VideoElement] instances in [js.context].
-  static const _kInstances = '\$general_developer.library.media_universe.media_universe_flutter.instances';
+  static const _kInstances =
+      '\$general_developer.library.media_universe.media_universe_flutter.instances';
 }

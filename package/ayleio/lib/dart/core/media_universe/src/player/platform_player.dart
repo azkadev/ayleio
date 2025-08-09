@@ -46,31 +46,45 @@ abstract class PlatformPlayer {
 
   /// Current state of the player available as listenable [Stream]s.
   late PlayerStream stream = PlayerStream(
-    playlistController.stream.distinct((previous, current) => previous == current),
-    playingController.stream.distinct((previous, current) => previous == current),
-    completedController.stream.distinct((previous, current) => previous == current),
-    positionController.stream.distinct((previous, current) => previous == current),
-    durationController.stream.distinct((previous, current) => previous == current),
-    volumeController.stream.distinct((previous, current) => previous == current),
+    playlistController.stream
+        .distinct((previous, current) => previous == current),
+    playingController.stream
+        .distinct((previous, current) => previous == current),
+    completedController.stream
+        .distinct((previous, current) => previous == current),
+    positionController.stream
+        .distinct((previous, current) => previous == current),
+    durationController.stream
+        .distinct((previous, current) => previous == current),
+    volumeController.stream
+        .distinct((previous, current) => previous == current),
     rateController.stream.distinct((previous, current) => previous == current),
     pitchController.stream.distinct((previous, current) => previous == current),
-    bufferingController.stream.distinct((previous, current) => previous == current),
-    bufferingPercentageController.stream.distinct((previous, current) => previous == current),
-    bufferController.stream.distinct((previous, current) => previous == current),
-    playlistModeController.stream.distinct((previous, current) => previous == current),
+    bufferingController.stream
+        .distinct((previous, current) => previous == current),
+    bufferingPercentageController.stream
+        .distinct((previous, current) => previous == current),
+    bufferController.stream
+        .distinct((previous, current) => previous == current),
+    playlistModeController.stream
+        .distinct((previous, current) => previous == current),
     /* AUDIO-PARAMS STREAM SHOULD NOT BE DISTINCT */
     audioParamsController.stream,
     /* VIDEO-PARAMS STREAM SHOULD NOT BE DISTINCT */
     videoParamsController.stream,
-    audioBitrateController.stream.distinct((previous, current) => previous == current),
-    audioDeviceController.stream.distinct((previous, current) => previous == current),
+    audioBitrateController.stream
+        .distinct((previous, current) => previous == current),
+    audioDeviceController.stream
+        .distinct((previous, current) => previous == current),
     audioDevicesController.stream.distinct(
       (previous, current) => const ListEquality().equals(previous, current),
     ),
     trackController.stream.distinct((previous, current) => previous == current),
-    tracksController.stream.distinct((previous, current) => previous == current),
+    tracksController.stream
+        .distinct((previous, current) => previous == current),
     widthController.stream.distinct((previous, current) => previous == current),
-    heightController.stream.distinct((previous, current) => previous == current),
+    heightController.stream
+        .distinct((previous, current) => previous == current),
     subtitleController.stream.distinct(
       (previous, current) => const ListEquality().equals(previous, current),
     ),
@@ -247,120 +261,144 @@ abstract class PlatformPlayer {
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Playlist> playlistController = StreamController<Playlist>.broadcast();
+  final StreamController<Playlist> playlistController =
+      StreamController<Playlist>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<bool> playingController = StreamController<bool>.broadcast();
+  final StreamController<bool> playingController =
+      StreamController<bool>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<bool> completedController = StreamController<bool>.broadcast();
+  final StreamController<bool> completedController =
+      StreamController<bool>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Duration> positionController = StreamController<Duration>.broadcast();
+  final StreamController<Duration> positionController =
+      StreamController<Duration>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Duration> durationController = StreamController.broadcast();
+  final StreamController<Duration> durationController =
+      StreamController.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<double> volumeController = StreamController.broadcast();
+  final StreamController<double> volumeController =
+      StreamController.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<double> rateController = StreamController<double>.broadcast();
+  final StreamController<double> rateController =
+      StreamController<double>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<double> pitchController = StreamController<double>.broadcast();
+  final StreamController<double> pitchController =
+      StreamController<double>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<bool> bufferingController = StreamController<bool>.broadcast();
+  final StreamController<bool> bufferingController =
+      StreamController<bool>.broadcast();
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<double> bufferingPercentageController = StreamController<double>.broadcast();
+  final StreamController<double> bufferingPercentageController =
+      StreamController<double>.broadcast();
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Duration> bufferController = StreamController<Duration>.broadcast();
-
-  @protected
-
-  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<PlaylistMode> playlistModeController = StreamController<PlaylistMode>.broadcast();
-
-  @protected
-
-  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<PlayerLog> logController = StreamController<PlayerLog>.broadcast();
+  final StreamController<Duration> bufferController =
+      StreamController<Duration>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<String> errorController = StreamController<String>.broadcast();
+  final StreamController<PlaylistMode> playlistModeController =
+      StreamController<PlaylistMode>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<AudioParams> audioParamsController = StreamController<AudioParams>.broadcast();
+  final StreamController<PlayerLog> logController =
+      StreamController<PlayerLog>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<VideoParams> videoParamsController = StreamController<VideoParams>.broadcast();
+  final StreamController<String> errorController =
+      StreamController<String>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<double?> audioBitrateController = StreamController<double?>.broadcast();
+  final StreamController<AudioParams> audioParamsController =
+      StreamController<AudioParams>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<AudioDevice> audioDeviceController = StreamController<AudioDevice>.broadcast();
+  final StreamController<VideoParams> videoParamsController =
+      StreamController<VideoParams>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<List<AudioDevice>> audioDevicesController = StreamController<List<AudioDevice>>.broadcast();
+  final StreamController<double?> audioBitrateController =
+      StreamController<double?>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Track> trackController = StreamController<Track>.broadcast();
+  final StreamController<AudioDevice> audioDeviceController =
+      StreamController<AudioDevice>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<Tracks> tracksController = StreamController<Tracks>.broadcast();
+  final StreamController<List<AudioDevice>> audioDevicesController =
+      StreamController<List<AudioDevice>>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<int?> widthController = StreamController<int?>.broadcast();
+  final StreamController<Track> trackController =
+      StreamController<Track>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<int?> heightController = StreamController<int?>.broadcast();
+  final StreamController<Tracks> tracksController =
+      StreamController<Tracks>.broadcast();
 
   @protected
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  final StreamController<List<String>> subtitleController = StreamController<List<String>>.broadcast();
+  final StreamController<int?> widthController =
+      StreamController<int?>.broadcast();
+
+  @protected
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  final StreamController<int?> heightController =
+      StreamController<int?>.broadcast();
+
+  @protected
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  final StreamController<List<String>> subtitleController =
+      StreamController<List<String>>.broadcast();
 
   // --------------------------------------------------
 

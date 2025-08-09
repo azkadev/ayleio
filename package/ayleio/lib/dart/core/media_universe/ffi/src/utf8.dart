@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // import 'dart:ffi' show Allocator, Opaque, Pointer, Uint8, Uint8Pointer, nullptr;
-import 'dart:ffi' ;
+import 'dart:ffi';
 // import 'dart:ffi';
 import 'dart:convert';
 import 'dart:typed_data';

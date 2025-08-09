@@ -74,18 +74,21 @@ class VideoController {
   /// {@macro video_controller}
   VideoController(
     this.player, {
-    VideoControllerConfiguration configuration = const VideoControllerConfiguration(),
+    VideoControllerConfiguration configuration =
+        const VideoControllerConfiguration(),
   }) {
     player.platform?.isVideoControllerAttached = true;
 
     () async {
       try {
         if (NativeVideoController.supported) {
-          final result = await NativeVideoController.create(player, configuration);
+          final result =
+              await NativeVideoController.create(player, configuration);
           platform.complete(result);
           notifier.value = result;
         } else if (AndroidVideoController.supported) {
-          final result = await AndroidVideoController.create(player, configuration);
+          final result =
+              await AndroidVideoController.create(player, configuration);
           platform.complete(result);
           notifier.value = result;
         } else if (WebVideoController.supported) {

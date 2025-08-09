@@ -25,7 +25,7 @@ import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart';
 
 import 'package:ayleio/dart/core/media_universe_video/src/utils/query_decoders.dart';
 import 'package:ayleio/dart/core/media_universe_video/src/video_controller/platform_video_controller.dart';
- 
+
 /// {@template android_video_controller}
 ///
 /// AndroidVideoController
@@ -47,7 +47,8 @@ class AndroidVideoController extends PlatformVideoController {
   // ----------------------------------------------
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
-  bool get androidAttachSurfaceAfterVideoParameters => configuration.androidAttachSurfaceAfterVideoParameters ?? vo == 'gpu';
+  bool get androidAttachSurfaceAfterVideoParameters =>
+      configuration.androidAttachSurfaceAfterVideoParameters ?? vo == 'gpu';
 
   /// --vo
   String get vo => configuration.vo ?? 'gpu';
@@ -63,7 +64,8 @@ class AndroidVideoController extends PlatformVideoController {
     if (isEmulator) {
       enableHardwareAcceleration = false;
     }
-    _hwdec = configuration.hwdec ?? (enableHardwareAcceleration ? 'auto-safe' : 'no');
+    _hwdec = configuration.hwdec ??
+        (enableHardwareAcceleration ? 'auto-safe' : 'no');
     return _hwdec!;
   }
 
@@ -180,7 +182,9 @@ class AndroidVideoController extends PlatformVideoController {
 
     _subscription = player.stream.videoParams.listen(
       (event) => _lock.synchronized(() async {
-        if ([0, null].contains(event.dw) || [0, null].contains(event.dh) || _wid == null) {
+        if ([0, null].contains(event.dw) ||
+            [0, null].contains(event.dh) ||
+            _wid == null) {
           return;
         }
 
@@ -205,7 +209,8 @@ class AndroidVideoController extends PlatformVideoController {
             // NOTE: Only required for --vo=gpu
             // With --vo=gpu, we need to update the android.graphics.SurfaceTexture size & notify libmpv to re-create vo.
             // In native Android, this kind of rendering is done with android.view.SurfaceView + android.view.SurfaceHolder, which offers onSurfaceChanged to handle this.
-            await _channel.invokeMethod('VideoOutputManager.SetSurfaceTextureSize', {
+            await _channel
+                .invokeMethod('VideoOutputManager.SetSurfaceTextureSize', {
               'handle': handle.toString(),
               'width': width.toString(),
               'height': height.toString(),
@@ -235,7 +240,8 @@ class AndroidVideoController extends PlatformVideoController {
           debugPrint(exception.toString());
           debugPrint(stacktrace.toString());
         }
-        rect.value = Rect.fromLTWH(0.0, 0.0, width.toDouble(), height.toDouble());
+        rect.value =
+            Rect.fromLTWH(0.0, 0.0, width.toDouble(), height.toDouble());
       }),
     );
   }
@@ -376,7 +382,8 @@ class AndroidVideoController extends PlatformVideoController {
               // Notify about updated texture ID & [Rect].
               final int handle = call.arguments['handle'];
               // Notify about the first frame being rendered.
-              final completer = _controllers[handle]?.waitUntilFirstFrameRenderedCompleter;
+              final completer =
+                  _controllers[handle]?.waitUntilFirstFrameRenderedCompleter;
               if (!(completer?.isCompleted ?? true)) {
                 completer?.complete();
               }

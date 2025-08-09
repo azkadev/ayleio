@@ -8,14 +8,15 @@
 library;
 
 // import 'dart:ffi';
-import 'dart:ffi' ;
+import 'dart:ffi';
 
 import 'dart:async';
 import 'dart:isolate';
 import 'dart:collection';
 
 import 'package:ayleio/dart/core/media_universe/ffi/ffi.dart';
-import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart' as generated;
+import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart'
+    as generated;
 import 'package:ayleio/dart/core/media_universe/src/player/native/core/native_library.dart';
 import 'package:ayleio/dart/core/media_universe/src/values.dart';
 

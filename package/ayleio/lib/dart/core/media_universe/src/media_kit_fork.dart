@@ -10,7 +10,7 @@ library;
 import 'dart:io';
 
 import 'package:ayleio/dart/core/media_universe/src/player/native/player/player.dart';
- 
+
 /// {@template media_kit_fork}
 ///
 /// package:media_kit_fork
@@ -26,7 +26,7 @@ abstract class MediaKit {
     if (_initialized) return;
 
     try {
-       if (Platform.isWindows) {
+      if (Platform.isWindows) {
         nativeEnsureInitialized(libmpv: libmpv);
       } else if (Platform.isLinux) {
         nativeEnsureInitialized(libmpv: libmpv);

@@ -5,7 +5,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'dart:ffi';
-import 'dart:io'; 
+import 'dart:io';
 
 // Note that kernel32.dll is the correct name in both 32-bit and 64-bit.
 /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer

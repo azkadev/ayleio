@@ -14,7 +14,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ayleio/dart/core/media_universe_video/media_kit_video_fork.dart';
 
-import 'package:ayleio/dart/core/media_universe_video/media_kit_video_controls/media_kit_video_controls.dart' as media_kit_video_controls;
+import 'package:ayleio/dart/core/media_universe_video/media_kit_video_controls/media_kit_video_controls.dart'
+    as media_kit_video_controls;
 import 'package:ayleio/dart/core/media_universe_video/src/utils/dispose_safe_notifer.dart';
 
 import 'package:ayleio/dart/core/media_universe_video/src/utils/wakelock.dart';
@@ -198,7 +199,8 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
     EdgeInsets padding, {
     Duration duration = const Duration(milliseconds: 100),
   }) {
-    return _subtitleViewKey.currentState?.setPadding(padding, duration: duration);
+    return _subtitleViewKey.currentState
+        ?.setPadding(padding, duration: duration);
   }
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
@@ -213,7 +215,8 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
     /* VideoControlsBuilder? */ dynamic controls,
     SubtitleViewConfiguration? subtitleViewConfiguration,
   }) {
-    _videoViewParametersNotifier.value = _videoViewParametersNotifier.value.copyWith(
+    _videoViewParametersNotifier.value =
+        _videoViewParametersNotifier.value.copyWith(
       width: width,
       height: height,
       fit: fit,
@@ -233,15 +236,29 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
     final currentParams = _videoViewParametersNotifier.value;
 
     final newParams = currentParams.copyWith(
-      width: widget.width != oldWidget.width ? widget.width : currentParams.width,
-      height: widget.height != oldWidget.height ? widget.height : currentParams.height,
+      width:
+          widget.width != oldWidget.width ? widget.width : currentParams.width,
+      height: widget.height != oldWidget.height
+          ? widget.height
+          : currentParams.height,
       fit: widget.fit != oldWidget.fit ? widget.fit : currentParams.fit,
       fill: widget.fill != oldWidget.fill ? widget.fill : currentParams.fill,
-      alignment: widget.alignment != oldWidget.alignment ? widget.alignment : currentParams.alignment,
-      aspectRatio: widget.aspectRatio != oldWidget.aspectRatio ? widget.aspectRatio : currentParams.aspectRatio,
-      filterQuality: widget.filterQuality != oldWidget.filterQuality ? widget.filterQuality : currentParams.filterQuality,
-      controls: widget.controls != oldWidget.controls ? widget.controls : currentParams.controls,
-      subtitleViewConfiguration: widget.subtitleViewConfiguration != oldWidget.subtitleViewConfiguration ? widget.subtitleViewConfiguration : currentParams.subtitleViewConfiguration,
+      alignment: widget.alignment != oldWidget.alignment
+          ? widget.alignment
+          : currentParams.alignment,
+      aspectRatio: widget.aspectRatio != oldWidget.aspectRatio
+          ? widget.aspectRatio
+          : currentParams.aspectRatio,
+      filterQuality: widget.filterQuality != oldWidget.filterQuality
+          ? widget.filterQuality
+          : currentParams.filterQuality,
+      controls: widget.controls != oldWidget.controls
+          ? widget.controls
+          : currentParams.controls,
+      subtitleViewConfiguration: widget.subtitleViewConfiguration !=
+              oldWidget.subtitleViewConfiguration
+          ? widget.subtitleViewConfiguration
+          : currentParams.subtitleViewConfiguration,
     );
 
     if (newParams != currentParams) {
@@ -253,34 +270,41 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
 
   @override
   void didChangeDependencies() {
-    _videoViewParametersNotifier = media_kit_video_controls.VideoStateInheritedWidget.maybeOf(context)?.videoViewParametersNotifier ??
-        ValueNotifier<VideoViewParameters>(
-          VideoViewParameters(
-            width: widget.width,
-            height: widget.height,
-            fit: widget.fit,
-            fill: widget.fill,
-            alignment: widget.alignment,
-            aspectRatio: widget.aspectRatio,
-            filterQuality: widget.filterQuality,
-            controls: widget.controls,
-            subtitleViewConfiguration: widget.subtitleViewConfiguration,
-          ),
-        );
-    _disposeNotifiers = media_kit_video_controls.VideoStateInheritedWidget.maybeOf(context)?.disposeNotifiers ?? true;
+    _videoViewParametersNotifier =
+        media_kit_video_controls.VideoStateInheritedWidget.maybeOf(context)
+                ?.videoViewParametersNotifier ??
+            ValueNotifier<VideoViewParameters>(
+              VideoViewParameters(
+                width: widget.width,
+                height: widget.height,
+                fit: widget.fit,
+                fill: widget.fill,
+                alignment: widget.alignment,
+                aspectRatio: widget.aspectRatio,
+                filterQuality: widget.filterQuality,
+                controls: widget.controls,
+                subtitleViewConfiguration: widget.subtitleViewConfiguration,
+              ),
+            );
+    _disposeNotifiers =
+        media_kit_video_controls.VideoStateInheritedWidget.maybeOf(context)
+                ?.disposeNotifiers ??
+            true;
     super.didChangeDependencies();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (widget.pauseUponEnteringBackgroundMode) {
-      if ([AppLifecycleState.paused, AppLifecycleState.detached].contains(state)) {
+      if ([AppLifecycleState.paused, AppLifecycleState.detached]
+          .contains(state)) {
         if (widget.controller.player.state.playing) {
           _pauseDueToPauseUponEnteringBackgroundMode = true;
           widget.controller.player.pause();
         }
       } else {
-        if (widget.resumeUponEnteringForegroundMode && _pauseDueToPauseUponEnteringBackgroundMode) {
+        if (widget.resumeUponEnteringForegroundMode &&
+            _pauseDueToPauseUponEnteringBackgroundMode) {
           _pauseDueToPauseUponEnteringBackgroundMode = false;
           widget.controller.player.play();
         }
@@ -387,14 +411,23 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
                                 return ValueListenableBuilder<Rect?>(
                                   valueListenable: notifier.rect,
                                   builder: (context, rect, _) {
-                                    if (handle != null && rect != null && _visible) {
+                                    if (handle != null &&
+                                        rect != null &&
+                                        _visible) {
                                       return SizedBox(
                                         // Apply aspect ratio if provided.
-                                        width: videoViewParameters.aspectRatio == null ? rect.width : rect.height * videoViewParameters.aspectRatio!,
+                                        width:
+                                            videoViewParameters.aspectRatio ==
+                                                    null
+                                                ? rect.width
+                                                : rect.height *
+                                                    videoViewParameters
+                                                        .aspectRatio!,
                                         height: rect.height,
                                         child: HtmlElementView(
                                           key: _key,
-                                          viewType: 'general_developer.library.media_universe.$handle',
+                                          viewType:
+                                              'general_developer.library.media_universe.$handle',
                                         ),
                                       );
                                     }
@@ -406,12 +439,15 @@ class VideoState extends State<Video> with WidgetsBindingObserver {
                     ),
                   ),
                 ),
-                if (videoViewParameters.subtitleViewConfiguration.visible && !(widget.controller.player.platform?.configuration.libass ?? false))
+                if (videoViewParameters.subtitleViewConfiguration.visible &&
+                    !(widget.controller.player.platform?.configuration.libass ??
+                        false))
                   Positioned.fill(
                     child: SubtitleView(
                       controller: widget.controller,
                       key: _subtitleViewKey,
-                      configuration: videoViewParameters.subtitleViewConfiguration,
+                      configuration:
+                          videoViewParameters.subtitleViewConfiguration,
                     ),
                   ),
                 if (videoViewParameters.controls != null)

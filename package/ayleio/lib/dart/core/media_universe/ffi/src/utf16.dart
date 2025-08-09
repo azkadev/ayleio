@@ -4,7 +4,7 @@
 
 // import 'dart:ffi';
 // import 'dart:ffi' show Allocator, Opaque, Pointer, Uint8, Uint8Pointer, nullptr;
-import 'dart:ffi' ;
+import 'dart:ffi';
 
 import 'dart:typed_data';
 
@@ -52,7 +52,8 @@ extension Utf16Pointer on Pointer<Utf16> {
     }
   }
 
-  static String _toKnownLengthString(Pointer<Uint16> codeUnits, int length) => String.fromCharCodes(codeUnits.asTypedList(length));
+  static String _toKnownLengthString(Pointer<Uint16> codeUnits, int length) =>
+      String.fromCharCodes(codeUnits.asTypedList(length));
 
   static String _toUnknownLengthString(Pointer<Uint16> codeUnits) {
     final buffer = StringBuffer();

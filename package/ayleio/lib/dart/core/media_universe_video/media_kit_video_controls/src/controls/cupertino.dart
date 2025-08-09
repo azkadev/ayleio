@@ -30,10 +30,12 @@ Widget CupertinoVideoControls(VideoState state) {
 //             kDefaultCupertinoVideoControlsThemeDataFullscreen;
 
 /// Default [CupertinoVideoControlsThemeData].
-const kDefaultCupertinoVideoControlsThemeData = CupertinoVideoControlsThemeData();
+const kDefaultCupertinoVideoControlsThemeData =
+    CupertinoVideoControlsThemeData();
 
 /// Default [CupertinoVideoControlsThemeData] for fullscreen.
-const kDefaultCupertinoVideoControlsThemeDataFullscreen = CupertinoVideoControlsThemeData();
+const kDefaultCupertinoVideoControlsThemeDataFullscreen =
+    CupertinoVideoControlsThemeData();
 
 /// {@template cupertino_video_controls_theme_data}
 ///
@@ -67,7 +69,8 @@ class CupertinoVideoControlsTheme extends InheritedWidget {
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static CupertinoVideoControlsTheme? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<CupertinoVideoControlsTheme>();
+    return context
+        .dependOnInheritedWidgetOfExactType<CupertinoVideoControlsTheme>();
   }
 
   /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
@@ -81,7 +84,9 @@ class CupertinoVideoControlsTheme extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(CupertinoVideoControlsTheme oldWidget) => identical(normal, oldWidget.normal) && identical(fullscreen, oldWidget.fullscreen);
+  bool updateShouldNotify(CupertinoVideoControlsTheme oldWidget) =>
+      identical(normal, oldWidget.normal) &&
+      identical(fullscreen, oldWidget.fullscreen);
 }
 
 /// {@macro cupertino_video_controls}
@@ -89,7 +94,8 @@ class _CupertinoVideoControls extends StatefulWidget {
   const _CupertinoVideoControls();
 
   @override
-  State<_CupertinoVideoControls> createState() => _CupertinoVideoControlsState();
+  State<_CupertinoVideoControls> createState() =>
+      _CupertinoVideoControlsState();
 }
 
 /// {@macro cupertino_video_controls}

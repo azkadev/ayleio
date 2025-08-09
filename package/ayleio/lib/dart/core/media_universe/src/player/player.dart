@@ -19,7 +19,7 @@ import 'package:ayleio/dart/core/media_universe/src/models/playlist_mode.dart';
 import 'package:ayleio/dart/core/media_universe/src/models/player_stream.dart';
 
 import 'package:ayleio/dart/core/media_universe/src/player/native/player/player.dart';
- import 'package:ayleio/dart/core/media_universe/src/player/platform_player.dart';
+import 'package:ayleio/dart/core/media_universe/src/player/platform_player.dart';
 
 /// {@template player}
 ///
@@ -103,7 +103,7 @@ import 'package:ayleio/dart/core/media_universe/src/player/native/player/player.
 class Player {
   /// {@macro player}
   Player({PlayerConfiguration configuration = const PlayerConfiguration()}) {
-      if (Platform.isWindows) {
+    if (Platform.isWindows) {
       platform = NativePlayer(configuration: configuration);
     } else if (Platform.isLinux) {
       platform = NativePlayer(configuration: configuration);

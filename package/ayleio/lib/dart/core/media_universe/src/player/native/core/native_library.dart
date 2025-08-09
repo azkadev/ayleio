@@ -10,7 +10,7 @@ import 'dart:ffi';
 import 'dart:io';
 
 import 'package:ayleio/utils/utils.dart';
- 
+
 /// {@template native_library}
 ///
 /// NativeLibrary
@@ -73,11 +73,16 @@ abstract class NativeLibrary {
       if (_resolved == null) {
         throw Exception(
           {
-            'windows': 'Cannot find libmpv-2.dll in your system %PATH%. One way to deal with this is to ship libmpv-2.dll with your compiled executable or script in the same directory.',
-            'linux': 'Cannot find libmpv at the usual places. Depending upon your distribution, you can install the libmpv package to make shared library available globally. On Debian or Ubuntu based systems, you can install it with: apt install libmpv-dev.',
-            'macos': 'Cannot find Mpv.framework/Mpv. Please ensure it\'s presence in the Frameworks folder of the application.',
-            'ios': 'Cannot find Mpv.framework/Mpv. Please ensure it\'s presence in the Frameworks folder of the application.',
-            'android': 'Cannot find libmpv.so. Please ensure it\'s presence in the APK.',
+            'windows':
+                'Cannot find libmpv-2.dll in your system %PATH%. One way to deal with this is to ship libmpv-2.dll with your compiled executable or script in the same directory.',
+            'linux':
+                'Cannot find libmpv at the usual places. Depending upon your distribution, you can install the libmpv package to make shared library available globally. On Debian or Ubuntu based systems, you can install it with: apt install libmpv-dev.',
+            'macos':
+                'Cannot find Mpv.framework/Mpv. Please ensure it\'s presence in the Frameworks folder of the application.',
+            'ios':
+                'Cannot find Mpv.framework/Mpv. Please ensure it\'s presence in the Frameworks folder of the application.',
+            'android':
+                'Cannot find libmpv.so. Please ensure it\'s presence in the APK.',
           }[Platform.operatingSystem]!,
         );
       }

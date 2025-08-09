@@ -48,7 +48,8 @@ abstract class PlatformVideoController {
   Future<void> setSize({int? width, int? height});
 
   /// A [Future] that completes when the first video frame has been rendered.
-  Future<void> get waitUntilFirstFrameRendered => waitUntilFirstFrameRenderedCompleter.future;
+  Future<void> get waitUntilFirstFrameRendered =>
+      waitUntilFirstFrameRenderedCompleter.future;
 
   /// [Completer] used to signal the decoding & rendering of the first video frame.
   /// Use [waitUntilFirstFrameRendered] to wait for the first frame to be rendered.

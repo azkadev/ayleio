@@ -104,7 +104,10 @@ class SubtitleViewState extends State<SubtitleView> {
             // ignore: deprecated_member_use
             MediaQuery.of(context).textScaleFactor *
                 sqrt(
-                  ((constraints.maxWidth * constraints.maxHeight) / (kTextScaleFactorReferenceWidth * kTextScaleFactorReferenceHeight)).clamp(0.0, 1.0),
+                  ((constraints.maxWidth * constraints.maxHeight) /
+                          (kTextScaleFactorReferenceWidth *
+                              kTextScaleFactorReferenceHeight))
+                      .clamp(0.0, 1.0),
                 );
         return Material(
           color: Colors.transparent,

@@ -37,7 +37,8 @@ class Media extends Playable {
   /// 1. Evict the [Media] instance from [cache].
   /// 2. Close the file descriptor created by [AndroidContentUriProvider] to handle content:// URIs on Android.
   /// 3. Revoke the object URL created by [Media.memory] on web.
-  static final Finalizer<_MediaFinalizerContext> _finalizer = Finalizer<_MediaFinalizerContext>((context) async {
+  static final Finalizer<_MediaFinalizerContext> _finalizer =
+      Finalizer<_MediaFinalizerContext>((context) async {
     final uri = context.uri;
     final memory = context.memory;
     // Decrement reference count.
@@ -89,11 +90,13 @@ class Media extends Playable {
     this.end,
   })  : uri = normalizeURI(resource),
         extras = extras ?? cache[normalizeURI(resource)]?.extras,
-        httpHeaders = httpHeaders ?? cache[normalizeURI(resource)]?.httpHeaders {
+        httpHeaders =
+            httpHeaders ?? cache[normalizeURI(resource)]?.httpHeaders {
     // Increment reference count.
     ref[uri] = ((ref[uri] ?? 0) + 1).clamp(0, 1 << 32);
     // Store [this] instance in [cache].
-    cache[uri] = _MediaCache(extras: this.extras, httpHeaders: this.httpHeaders);
+    cache[uri] =
+        _MediaCache(extras: this.extras, httpHeaders: this.httpHeaders);
     // Attach [this] instance to [Finalizer].
     _finalizer.attach(this, _MediaFinalizerContext(uri, _memory));
   }
@@ -149,14 +152,16 @@ class Media extends Playable {
   }
 
   @override
-  String toString() => 'Media($uri, extras: $extras, httpHeaders: $httpHeaders, start: $start, end: $end)';
+  String toString() =>
+      'Media($uri, extras: $extras, httpHeaders: $httpHeaders, start: $start, end: $end)';
 
   /// URI scheme used to identify Flutter assets.
   static const String _kAssetScheme = 'asset://';
 
   /// Previously created [Media] instances.
   /// This [HashMap] is used to retrieve previously set [extras] & [httpHeaders].
-  static final HashMap<String, _MediaCache> cache = HashMap<String, _MediaCache>();
+  static final HashMap<String, _MediaCache> cache =
+      HashMap<String, _MediaCache>();
 
   /// Previously created [Media] instances' reference count.
   static final HashMap<String, int> ref = HashMap<String, int>();

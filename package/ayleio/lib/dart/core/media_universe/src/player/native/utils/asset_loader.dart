@@ -10,7 +10,7 @@ import 'package:path/path.dart' as path;
 import 'package:ayleio/package/safe_local_storage/lib/safe_local_storage.dart';
 
 import 'package:ayleio/dart/core/media_universe/src/player/native/utils/android_asset_loader.dart';
- 
+
 /// {@template asset_loader}
 ///
 /// AssetLoader

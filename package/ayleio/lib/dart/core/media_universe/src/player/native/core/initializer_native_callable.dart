@@ -6,10 +6,11 @@
 library;
 
 import 'dart:collection';
-import 'dart:ffi' ;
+import 'dart:ffi';
 
 import 'package:ayleio/dart/core/media_universe/ffi/ffi.dart';
-import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart' as generated;
+import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart'
+    as generated;
 import 'package:ayleio/package/synchronized/lib/synchronized.dart';
 
 /// {@template initializer_native_callable}

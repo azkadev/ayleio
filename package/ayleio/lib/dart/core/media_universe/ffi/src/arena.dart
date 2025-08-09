@@ -4,7 +4,7 @@
 //
 // Explicit arena used for managing resources.
 
-import 'dart:ffi'; 
+import 'dart:ffi';
 import 'dart:ffi' show Allocator, Pointer, NativeType;
 import 'dart:async';
 

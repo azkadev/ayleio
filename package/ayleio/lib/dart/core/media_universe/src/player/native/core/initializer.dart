@@ -8,7 +8,8 @@ library;
 // import 'dart:ffi';
 import 'dart:ffi';
 
-import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart' as generated;
+import 'package:ayleio/dart/core/media_universe/generated/libmpv/bindings.dart'
+    as generated;
 import 'package:ayleio/dart/core/media_universe/src/player/native/core/execmem_restriction.dart';
 import 'package:ayleio/dart/core/media_universe/src/player/native/core/initializer_isolate.dart';
 import 'package:ayleio/dart/core/media_universe/src/player/native/core/initializer_native_callable.dart';
