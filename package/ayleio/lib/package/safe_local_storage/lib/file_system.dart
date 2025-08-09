@@ -64,12 +64,12 @@ String removeTrailingSlash(String path) {
 
 /// Wrapper around dart:io's [FileSystemEntity] class.
 abstract class FS {
-/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static Future<FileSystemEntityType> type_(String path) {
     return FileSystemEntity.type(addPrefix(path));
   }
 
-/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static FileSystemEntityType typeSync_(String path) {
     return FileSystemEntity.typeSync(addPrefix(path));
   }
@@ -528,7 +528,7 @@ extension FileSystemEntityExtension on FileSystemEntity {
     }
   }
 
-/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   String get extension => basename(path).split('.').last.toUpperCase();
 }
 

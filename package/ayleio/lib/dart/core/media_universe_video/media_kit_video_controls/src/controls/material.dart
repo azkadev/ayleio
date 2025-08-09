@@ -514,7 +514,7 @@ class _MaterialVideoControlsState extends State<_MaterialVideoControls> {
   late bool visible = _theme(context).visibleOnMount;
   Timer? _timer;
 
-  double _brightnessValue = 0.0;
+  final double _brightnessValue = 0.0;
   bool _brightnessIndicator = false;
   Timer? _brightnessTimer;
 

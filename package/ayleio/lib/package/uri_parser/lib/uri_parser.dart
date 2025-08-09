@@ -162,8 +162,9 @@ class URIParser {
     'RTMP',
   ];
 
-/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static const String kFileScheme2 = 'file://';
-/// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
+
+  /// General Library Documentation Undocument By General Corporation & Global Corporation & General Developer
   static const String kFileScheme3 = 'file:///';
 }
