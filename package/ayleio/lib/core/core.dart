@@ -14,34 +14,7 @@ import 'package:ayleio/uuid/uuid.dart';
 
 /// No Doc Azkadev
 class Ayleio {
-  static String _pathNativeLibrary = "";
-  final EventEmitterAzkadevAzkadev _eventEmitter = EventEmitterAzkadevAzkadev();
-
-  static NativeCallable<Void Function(Pointer<Char>)> _initializedNativeLibraryNativeCallbackFunction({
-    required EventEmitterAzkadevAzkadev eventEmitter,
-  }) {
-    return NativeCallable<Void Function(Pointer<Char>)>.listener((Pointer<Char> raw) {
-      try {
-        final valueRaw = raw.cast<Utf8>();
-        final value = valueRaw.toDartString();
-        if (value.isNotEmpty) {
-          final Map updateRaw = json.decode(value);
-          eventEmitter.emit(
-            eventName: () {
-              if (updateRaw["@extra"] is String) {
-                return "invoke";
-              }
-              return "update";
-            }(),
-            value: updateRaw,
-          );
-        }
-        try {
-          malloc.free(valueRaw);
-        } catch (e) {}
-      } catch (e) {}
-    });
-  }
+   
 
   bool _isInitialized = false;
 
@@ -70,15 +43,7 @@ class Ayleio {
   void ensureInitialized({
     String pathNativeLibrary = "",
   }) {
-    _pathNativeLibrary = getNativeLibraryPath(pathNativeLibrary: pathNativeLibrary);
-    final nativeCallback = Pointer.fromAddress(
-      Ayleio._initializedNativeLibraryNativeCallbackFunction(
-        eventEmitter: _eventEmitter,
-      ).nativeFunction.address,
-    );
-    print(nativeCallback);
-    print(_pathNativeLibrary);
-  }
+   }
 
   /// No Doc Azkadev
 
@@ -111,19 +76,6 @@ class Ayleio {
     return json.decode(resultNative.cast<Utf8>().toDartString());
   }
 
-  /// No Doc Azkadev
-  EventEmitterAzkadevListenerAzkadev on(String eventName, FutureOr<dynamic> Function(Map update) onCallback) {
-    return _eventEmitter.on(
-      eventName: eventName,
-      onCallback: (update) async {
-        try {
-          if (update is Map) {
-            await onCallback(update);
-          }
-        } catch (e) {}
-      },
-    );
-  }
 
   /// untuk membuat client nativeLibrary
   ///
@@ -164,22 +116,12 @@ class Ayleio {
       null => "${client_id}_1754639695024_${generateUuidAzkadev(10)}",
     };
     parameters["@extra"] = extra;
-    final Completer<Map> completer = Completer<Map>();
-    final listener = on(
-      "invoke",
-      (update) async {
-        if (!completer.isCompleted && update["@client_id"] == client_id && update["@extra"] == extra) {
-          completer.complete(update);
-        }
-      },
-    );
     parameters["@is_async"] = true;
     nativeLibraryInvokeRaw(parameters);
-    final result = await completer.future;
-    try {
-      listener.dispose();
-    } catch (e) {}
-    return result;
+    // final result = await completer.future; 
+    return {
+      "@type": "ok",
+    };
   }
 }
 

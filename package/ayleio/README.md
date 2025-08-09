@@ -22,16 +22,16 @@
 **Ayleio** media player untuk flutter dari base Media kit, saya membuat ini karena media kit tidak bisa build secara offline, jadi saya membuatnya
 
 - 🇮🇩 [Indonesia](https://github.com/azkadev/ayleio/blob/main/README.md)
-- 🇨🇿 [Afrika](https://github.com/azkadev/ayleio/blob/main/README_AFRIKA.md)
-- 🇨🇳 [China](https://github.com/azkadev/ayleio/blob/main/README_CHINA.md)
-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [English](https://github.com/azkadev/ayleio/blob/main/README_ENGLISH.md)
-- 🇮🇳 [India](https://github.com/azkadev/ayleio/blob/main/README_INDIA.md)
-- 🇮🇩 [Jawa](https://github.com/azkadev/ayleio/blob/main/README_JAWA.md)
-- 🇯🇵 [Jepang](https://github.com/azkadev/ayleio/blob/main/README_JEPANG.md)
-- 🇰🇷 [Korea](https://github.com/azkadev/ayleio/blob/main/README_KOREA.md)
-- 🇷🇺 [Russia](https://github.com/azkadev/ayleio/blob/main/README_RUSSIA.md)
-- 🇮🇩 [Sunda](https://github.com/azkadev/ayleio/blob/main/README_SUNDA.md)
-- 🇹🇭 [Thailand](https://github.com/azkadev/ayleio/blob/main/README_THAILAND.md)
+- 🇺🇸 [Inggris](https://github.com/azkadev/ayleio/blob/main/README_EN.md)
+- 🇰🇷 [Korea, Republic of South Korea](https://github.com/azkadev/ayleio/blob/main/README_KO.md)
+- 🇨🇳 [China](https://github.com/azkadev/ayleio/blob/main/README_zh-CN.md)
+- 🇿🇦 [South Africa](https://github.com/azkadev/ayleio/blob/main/README_AF.md)
+- 🇮🇳 [India](https://github.com/azkadev/ayleio/blob/main/README_HI.md)
+- 🇯🇵 [Japan](https://github.com/azkadev/ayleio/blob/main/README_JA.md)
+- 🇷🇺 [Russia](https://github.com/azkadev/ayleio/blob/main/README_RU.md)
+- 🇹🇭 [Thailand](https://github.com/azkadev/ayleio/blob/main/README_TH.md)
+- 🇦🇪 [United Arab Emirates](https://github.com/azkadev/ayleio/blob/main/README_AR.md)
+
 
 ## Fakta
 
