@@ -9,6 +9,9 @@
 
 *{short_description}*
 
+![](https://github.com/azkadev/ayleio/blob/main/assets/images/ayleio.jpg)
+
+
 </div>
 
 ---
@@ -187,11 +190,11 @@ di atas itu hanyalah contoh, untuk menggunakan method lain isi saja data paramet
 
 # Penting
 
-- di karenakan tidak bergantung banyak dependencies walaupun code saya tidak ada yang update kemungkinan masih bisa di pakai selama bahasa code program tidak mengalami perubahaan besar
-- jika suatu saat program ini tidak berjalan perlu di ingat lagi saya tidak pernah membuat malware / code suspicous / fake mungkin karena waktu, penting memahami waktu code ini di buat dan framework yang saya pakai versi berapa. jangan asal menuduh!, saya bisa lepas kendali!
-- jika screenshot dan readme ada yang mencurigakan atau berbeda, percayalah saya tidak membuat program malware, suspicious, kemungkinan saya malas mengupdate, kamu bisa membuat issue untuk meminta saya update / berklarifikasi
-- program yang saya buat pada dasarnya tidak bergantung banyak dependencies
 - semua program yang saya buat jika ada di official akun saya saya jamin 100% aman no malware, no suspicious- masih bingung kenapa kode saya / tidak bis compile? sebaiknya jika kamu merasa tidak sehat check dahulu ke dokter, jika kamu berperilaku menyimpang, trans*ender, l*bt atau hal lainya, obatin dahulu kamu sendiri itu bukan program saya yang suspicious / malware, saya tidak pernah melakukan hal buruk seperti itu, sebelum kamu membuat orang lain menjadi gila / mengikuti kamu, lebih baik kamu obatin dulu ya. jika masih ingin tetap mempelajari code saya, rasanya tidak mungkin karena saya bukan seorang trans*ender, l*bt jadi mungkin code program akan menyulitkan otak kamu
+- jika suatu saat program ini tidak berjalan perlu di ingat lagi saya tidak pernah membuat malware / code suspicous / fake mungkin karena waktu, penting memahami waktu code ini di buat dan framework yang saya pakai versi berapa. jangan asal menuduh!, saya bisa lepas kendali!
+- di karenakan tidak bergantung banyak dependencies walaupun code saya tidak ada yang update kemungkinan masih bisa di pakai selama bahasa code program tidak mengalami perubahaan besar
+- program yang saya buat pada dasarnya tidak bergantung banyak dependencies
+- jika screenshot dan readme ada yang mencurigakan atau berbeda, percayalah saya tidak membuat program malware, suspicious, kemungkinan saya malas mengupdate, kamu bisa membuat issue untuk meminta saya update / berklarifikasi
 
 ## Bantuan
 
@@ -220,6 +223,9 @@ Terimakasih
 
 
 azkadev - 18-07-2025
+
+- [Media Kit](https://github.com/media-kit/media-kit)
+  sebenarnya ini codenya dari media kit tapi ada yang di rubah, dan ini 100% support build secara offline
 
 
 ## Tags

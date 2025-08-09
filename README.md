@@ -224,6 +224,9 @@ Terimakasih
 
 azkadev - 18-07-2025
 
+- [Media Kit](https://github.com/media-kit/media-kit)
+  sebenarnya ini codenya dari media kit tapi ada yang di rubah, dan ini 100% support build secara offline
+
 
 ## Tags
 
