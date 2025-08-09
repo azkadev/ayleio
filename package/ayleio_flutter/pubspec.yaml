@@ -1,0 +1,56 @@
+name: 'ayleio_flutter'
+description: 'Media Universe is library for you to play any media files in cross platform support'
+version: '0.0.0'
+homepage: 'https://youtube.com/@azkadev'
+repository: 'https://github.com/azkadev/ayleio'
+issue_tracker: 'https://github.com/azkadev/ayleio/issues'
+documentation: 'https://github.com/azkadev/ayleio'
+funding:
+  - 'https://github.com/sponsors/azkadev'
+  - 'https://www.patreon.com/c/azkadev'
+  - 'https://opencollective.com/azkadev'
+  - 'https://paypal.me/azkadev'
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.3.0'
+dependencies:
+  flutter:
+    sdk: 'flutter'
+dev_dependencies:
+  flutter_lints: '^5.0.0'
+  flutter_test:
+    sdk: 'flutter'
+flutter:
+  plugin:
+    platforms:
+      android:
+        ffiPlugin: true
+        package: 'com.alexmercerind.media_kit_libs_android_video'
+        pluginClass: 'MediaKitLibsAndroidVideoPlugin'
+      linux:
+        ffiPlugin: true
+        pluginClass: 'AyleioFlutter'
+      web: null
+platforms:
+  android: null
+  ios: null
+  linux: null
+  macos: null
+  web: null
+  windows: null
+project:
+  type: ''
+  is_use_direct_package: false
+  is_private: false
+  developers:
+    - username: ''
+      note: ''
+      social_medias:
+        - 'https://github.com'
+  
+false_secrets:
+  - 'android/jniLibs'
+  - 'linux/'
+  - 'windows/'
+  - 'macos/'
+  - 'ios/'
