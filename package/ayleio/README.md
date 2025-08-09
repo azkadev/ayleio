@@ -7,7 +7,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge)](LICENSE)
 
-*{short_description}*
+*Putar Audio / Video Di Flutter*
 
 ![](https://github.com/azkadev/ayleio/blob/main/assets/images/ayleio.jpg)
 
@@ -19,7 +19,7 @@
 
 # Ayleio
 
-**Ayleio** {description}
+**Ayleio** media player untuk flutter dari base Media kit, saya membuat ini karena media kit tidak bisa build secara offline, jadi saya membuatnya
 
 - 🇮🇩 [Indonesia](https://github.com/azkadev/ayleio/blob/main/README.md)
 - 🇨🇿 [Afrika](https://github.com/azkadev/ayleio/blob/main/README_AFRIKA.md)
@@ -44,8 +44,9 @@
 
 ## Contoh
 
-- [Contoh Sederhana](https://github.com/azkadev/ayleio/tree/main/quickstart)
 
+- [Full Stack Application](https://github.com/azkadev/azkadev_fullstack_application_dart_and_flutter)
+- [Contoh Sederhana](https://github.com/azkadev/ayleio/tree/main/quickstart)
 
 
 ## Memasang
@@ -185,8 +186,7 @@ jika sudah mengisi parameters wajib, kita lanjut bagaimana menginvoke api
         });
 ```
 
-di atas itu hanyalah contoh, untuk menggunakan method lain isi saja data parameters, pastikan parameters key wajib di isi sesuai table, maksud saya ada beberapa key yang wajib di isi, jika tidak ya akan mengirim data error
-
+di atas itu hanyalah dokumentasi sedikit jika mau contoh lebih banyak silahkan check contoh di atas
 
 # Penting
 
